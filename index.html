@@ -6,577 +6,106 @@
     <title>Leave a Review for Carol Royse Team | Thank You!</title>
     <meta name="description" content="Thank you for choosing Carol Royse Team. Leave a review on Google, Zillow, or Realtor.com in just 60 seconds.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            font-size: 20px;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            font-size: 20px;
-            line-height: 1.7;
-            color: #1a1a1a;
-            background: #ffffff;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header with Phone */
-        .top-bar {
-            background: #0F1923;
-            padding: 12px 0;
-            text-align: center;
-            border-bottom: 2px solid #E8500A;
-        }
-
-        .top-bar a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 700;
-        }
-
-        .top-bar a:hover {
-            color: #E8500A;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: #0F1923;
-            padding: 60px 0 48px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 36px;
-            font-weight: 800;
-            color: #ffffff;
-            line-height: 1.3;
-            margin-bottom: 20px;
-        }
-
-        .hero-subhead {
-            font-size: 22px;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 48px;
-            line-height: 1.5;
-        }
-
-        .button-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 600px;
-            margin: 0 auto 32px;
-        }
-
-        .review-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            min-height: 100px;
-            padding: 24px 28px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 24px;
-            font-weight: 800;
-            color: #ffffff;
-            border: 3px solid transparent;
-            transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer;
-        }
-
-        .review-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        }
-
-        .review-button.google {
-            background: #4285F4;
-            border-color: #4285F4;
-        }
-
-        .review-button.zillow {
-            background: #006AFF;
-            border-color: #006AFF;
-        }
-
-        .review-button.realtor {
-            background: #D92228;
-            border-color: #D92228;
-        }
-
-        .button-icon {
-            width: 40px;
-            height: 40px;
-            flex-shrink: 0;
-        }
-
-        .button-text {
-            text-align: left;
-        }
-
-        .button-main {
-            display: block;
-        }
-
-        .button-sub {
-            display: block;
-            font-size: 16px;
-            font-weight: 600;
-            opacity: 0.95;
-            margin-top: 6px;
-        }
-
-        .help-text {
-            font-size: 20px;
-            color: rgba(255,255,255,0.8);
-            margin-top: 24px;
-            line-height: 1.5;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            margin-top: 24px;
-            padding: 12px 24px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 8px;
-            color: rgba(255,255,255,0.9);
-            font-size: 18px;
-        }
-
-        /* Personal Note Section */
-        .personal-note {
-            padding: 64px 0;
-            background: #f8f9fa;
-        }
-
-        .personal-note p {
-            font-size: 22px;
-            color: #333;
-            margin-bottom: 24px;
-            line-height: 1.7;
-        }
-
-        .personal-note .signature {
-            font-style: italic;
-            color: #555;
-            margin-top: 32px;
-            font-size: 20px;
-        }
-
-        /* Why It Matters */
-        .why-matters {
-            padding: 64px 0;
-            background: #ffffff;
-        }
-
-        .why-matters h2 {
-            font-size: 32px;
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #0F1923;
-        }
-
-        .why-block {
-            margin-bottom: 28px;
-            padding: 28px;
-            background: #f0f7ff;
-            border-radius: 12px;
-            border-left: 5px solid #006AFF;
-        }
-
-        .why-block h3 {
-            font-size: 24px;
-            font-weight: 800;
-            color: #006AFF;
-            margin-bottom: 12px;
-        }
-
-        .why-block p {
-            font-size: 20px;
-            color: #333;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        /* Instructions Section */
-        .instructions {
-            padding: 64px 0;
-            background: #f8f9fa;
-        }
-
-        .instructions h2 {
-            font-size: 26px;
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 32px;
-            line-height: 1.4;
-        }
-
-        .accordion {
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .accordion-item {
-            background: #ffffff;
-            margin-bottom: 16px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .accordion-header {
-            width: 100%;
-            padding: 24px 28px;
-            background: #ffffff;
-            border: none;
-            font-size: 22px;
-            font-weight: 800;
-            text-align: left;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .accordion-header:hover {
-            background: #f8f9fa;
-        }
-
-        .accordion-icon {
-            font-size: 32px;
-            font-weight: 300;
-            color: #E8500A;
-            width: 40px;
-            text-align: center;
-        }
-
-        .accordion-content {
-            display: none;
-            padding: 28px;
-            background: #ffffff;
-        }
-
-        .accordion-item.active .accordion-content {
-            display: block;
-        }
-
-        .step-list {
-            list-style: none;
-            counter-reset: step;
-        }
-
-        .step-list li {
-            counter-increment: step;
-            margin-bottom: 20px;
-            padding-left: 56px;
-            position: relative;
-            font-size: 20px;
-            line-height: 1.6;
-        }
-
-        .step-list li::before {
-            content: counter(step);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 40px;
-            height: 40px;
-            background: #E8500A;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 18px;
-        }
-
-        /* What to Write */
-        .prompts {
-            padding: 64px 0;
-            background: #ffffff;
-        }
-
-        .prompts h2 {
-            font-size: 32px;
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 24px;
-            color: #0F1923;
-        }
-
-        .prompt-intro {
-            font-size: 22px;
-            text-align: center;
-            color: #555;
-            margin-bottom: 40px;
-        }
-
-        .prompt-list {
-            list-style: none;
-            margin-bottom: 40px;
-        }
-
-        .prompt-list li {
-            padding: 20px 20px 20px 56px;
-            margin-bottom: 16px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            font-size: 20px;
-            position: relative;
-            line-height: 1.5;
-        }
-
-        .prompt-list li::before {
-            content: "✓";
-            position: absolute;
-            left: 20px;
-            top: 20px;
-            color: #22c55e;
-            font-weight: 800;
-            font-size: 24px;
-        }
-
-        .sample-review {
-            background: #fffbeb;
-            border: 3px solid #f59e0b;
-            border-radius: 12px;
-            padding: 32px;
-            margin-top: 32px;
-        }
-
-        .sample-review h4 {
-            font-size: 20px;
-            font-weight: 800;
-            color: #92400e;
-            margin-bottom: 16px;
-        }
-
-        .sample-review blockquote {
-            font-size: 20px;
-            font-style: italic;
-            color: #333;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        /* Concern Section */
-        .concern {
-            padding: 64px 0;
-            background: #fef2f2;
-            text-align: center;
-        }
-
-        .concern h2 {
-            font-size: 32px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            color: #991b1b;
-        }
-
-        .concern > p {
-            font-size: 22px;
-            color: #333;
-            margin-bottom: 32px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-        }
-
-        .concern-phone {
-            display: inline-block;
-            padding: 20px 40px;
-            background: #dc2626;
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-size: 26px;
-            font-weight: 800;
-        }
-
-        .concern-phone:hover {
-            background: #b91c1c;
-        }
-
-        .concern-name {
-            margin-top: 20px;
-            font-size: 20px;
-            color: #555;
-        }
-
-        /* Thank You Section */
-        .thank-you {
-            padding: 80px 0;
-            background: #0F1923;
-            text-align: center;
-            color: #ffffff;
-        }
-
-        .family-photo {
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 6px solid #E8500A;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .thank-you h2 {
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 24px;
-        }
-
-        .thank-you p {
-            font-size: 24px;
-            color: rgba(255,255,255,0.9);
-            max-width: 600px;
-            margin: 0 auto 32px;
-            line-height: 1.5;
-        }
-
-        .thank-you .signature {
-            font-size: 28px;
-            font-weight: 700;
-            color: #E8500A;
-            margin-bottom: 32px;
-        }
-
-        .legacy-stat {
-            font-size: 20px;
-            color: rgba(255,255,255,0.8);
-            padding: 20px 32px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 12px;
-            display: inline-block;
-        }
-
-        /* Footer */
-        .footer-cta {
-            padding: 64px 0;
-            background: #f8f9fa;
-            text-align: center;
-        }
-
-        .footer-cta h3 {
-            font-size: 28px;
-            font-weight: 800;
-            margin-bottom: 32px;
-            color: #0F1923;
-        }
-
-        .contact-info {
-            padding: 48px 0;
-            background: #0F1923;
-            text-align: center;
-            color: rgba(255,255,255,0.8);
-        }
-
-        .contact-info p {
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
-
-        .contact-info a {
-            color: #E8500A;
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Mobile adjustments */
-        @media (max-width: 768px) {
-            html {
-                font-size: 18px;
-            }
-
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            .review-button {
-                font-size: 22px;
-                min-height: 88px;
-                padding: 20px 24px;
-            }
-
-            .button-icon {
-                width: 36px;
-                height: 36px;
-            }
-
-            .family-photo {
-                width: 220px;
-                height: 220px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 20px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 20px; line-height: 1.7; color: #1a1a1a; background: #ffffff; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        .top-bar { background: #0F1923; padding: 12px 0; text-align: center; border-bottom: 2px solid #E8500A; }
+        .top-bar a { color: #ffffff; text-decoration: none; font-size: 20px; font-weight: 700; }
+        .top-bar a:hover { color: #E8500A; }
+        .hero { background: #0F1923; padding: 60px 0 48px; text-align: center; }
+        .hero h1 { font-size: 36px; font-weight: 800; color: #ffffff; line-height: 1.3; margin-bottom: 20px; }
+        .hero-subhead { font-size: 22px; color: rgba(255,255,255,0.9); margin-bottom: 48px; line-height: 1.5; }
+        .button-stack { display: flex; flex-direction: column; gap: 20px; max-width: 600px; margin: 0 auto 32px; }
+        .review-button { display: flex; align-items: center; justify-content: center; gap: 20px; min-height: 100px; padding: 24px 28px; border-radius: 12px; text-decoration: none; font-size: 24px; font-weight: 800; color: #ffffff; border: 3px solid transparent; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+        .review-button:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+        .review-button.google { background: #4285F4; border-color: #4285F4; }
+        .review-button.zillow { background: #006AFF; border-color: #006AFF; }
+        .review-button.realtor { background: #D92228; border-color: #D92228; }
+        .button-icon { width: 40px; height: 40px; flex-shrink: 0; }
+        .button-text { text-align: left; }
+        .button-main { display: block; }
+        .button-sub { display: block; font-size: 16px; font-weight: 600; opacity: 0.95; margin-top: 6px; }
+        .help-text { font-size: 20px; color: rgba(255,255,255,0.8); margin-top: 24px; line-height: 1.5; }
+        .hero-badge { display: inline-block; margin-top: 24px; padding: 12px 24px; background: rgba(255,255,255,0.1); border-radius: 8px; color: rgba(255,255,255,0.9); font-size: 18px; }
+        .personal-note { padding: 64px 0; background: #f8f9fa; }
+        .personal-note p { font-size: 22px; color: #333; margin-bottom: 24px; line-height: 1.7; }
+        .personal-note .signature { font-style: italic; color: #555; margin-top: 32px; font-size: 20px; }
+        .why-matters { padding: 64px 0; background: #ffffff; }
+        .why-matters h2 { font-size: 32px; font-weight: 800; text-align: center; margin-bottom: 40px; color: #0F1923; }
+        .why-block { margin-bottom: 28px; padding: 28px; background: #f0f7ff; border-radius: 12px; border-left: 5px solid #006AFF; }
+        .why-block h3 { font-size: 24px; font-weight: 800; color: #006AFF; margin-bottom: 12px; }
+        .why-block p { font-size: 20px; color: #333; margin: 0; line-height: 1.6; }
+        .instructions { padding: 64px 0; background: #f8f9fa; }
+        .instructions h2 { font-size: 26px; font-weight: 800; text-align: center; margin-bottom: 32px; line-height: 1.4; }
+        .accordion { border-radius: 12px; overflow: hidden; }
+        .accordion-item { background: #ffffff; margin-bottom: 16px; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .accordion-header { width: 100%; padding: 24px 28px; background: #ffffff; border: none; font-size: 22px; font-weight: 800; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .accordion-header:hover { background: #f8f9fa; }
+        .accordion-icon { font-size: 32px; font-weight: 300; color: #E8500A; width: 40px; text-align: center; }
+        .accordion-content { display: none; padding: 28px; background: #ffffff; }
+        .accordion-item.active .accordion-content { display: block; }
+        .step-list { list-style: none; counter-reset: step; }
+        .step-list li { counter-increment: step; margin-bottom: 20px; padding-left: 56px; position: relative; font-size: 20px; line-height: 1.6; }
+        .step-list li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 40px; height: 40px; background: #E8500A; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; }
+        .prompts { padding: 64px 0; background: #ffffff; }
+        .prompts h2 { font-size: 32px; font-weight: 800; text-align: center; margin-bottom: 24px; color: #0F1923; }
+        .prompt-intro { font-size: 22px; text-align: center; color: #555; margin-bottom: 40px; }
+        .prompt-list { list-style: none; margin-bottom: 40px; }
+        .prompt-list li { padding: 20px 20px 20px 56px; margin-bottom: 16px; background: #f8f9fa; border-radius: 10px; font-size: 20px; position: relative; line-height: 1.5; }
+        .prompt-list li::before { content: "✓"; position: absolute; left: 20px; top: 20px; color: #22c55e; font-weight: 800; font-size: 24px; }
+        .sample-review { background: #fffbeb; border: 3px solid #f59e0b; border-radius: 12px; padding: 32px; margin-top: 32px; }
+        .sample-review h4 { font-size: 20px; font-weight: 800; color: #92400e; margin-bottom: 16px; }
+        .sample-review blockquote { font-size: 20px; font-style: italic; color: #333; margin: 0; line-height: 1.6; }
+        .concern { padding: 64px 0; background: #fef2f2; text-align: center; }
+        .concern h2 { font-size: 32px; font-weight: 800; margin-bottom: 20px; color: #991b1b; }
+        .concern > p { font-size: 22px; color: #333; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+        .concern-phone { display: inline-block; padding: 20px 40px; background: #dc2626; color: white; text-decoration: none; border-radius: 12px; font-size: 26px; font-weight: 800; }
+        .concern-phone:hover { background: #b91c1c; }
+        .concern-name { margin-top: 20px; font-size: 20px; color: #555; }
+        .thank-you { padding: 80px 0; background: #0F1923; text-align: center; color: #ffffff; }
+        .family-photo { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 6px solid #E8500A; margin-bottom: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .thank-you h2 { font-size: 36px; font-weight: 800; margin-bottom: 24px; }
+        .thank-you p { font-size: 24px; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 32px; line-height: 1.5; }
+        .thank-you .signature { font-size: 28px; font-weight: 700; color: #E8500A; margin-bottom: 32px; }
+        .legacy-stat { font-size: 20px; color: rgba(255,255,255,0.8); padding: 20px 32px; background: rgba(255,255,255,0.1); border-radius: 12px; display: inline-block; }
+        .footer-cta { padding: 64px 0; background: #f8f9fa; text-align: center; }
+        .footer-cta h3 { font-size: 28px; font-weight: 800; margin-bottom: 32px; color: #0F1923; }
+        .contact-info { padding: 48px 0; background: #0F1923; text-align: center; color: rgba(255,255,255,0.8); }
+        .contact-info p { font-size: 20px; margin-bottom: 12px; }
+        .contact-info a { color: #E8500A; text-decoration: none; font-weight: 700; }
+        .contact-info a:hover { text-decoration: underline; }
+        @media (max-width: 768px) { html { font-size: 18px; } .hero h1 { font-size: 30px; } .review-button { font-size: 22px; min-height: 88px; padding: 20px 24px; } .button-icon { width: 36px; height: 36px; } .family-photo { width: 220px; height: 220px; } }
     </style>
 </head>
 <body>
-    <!-- Top Bar with Phone -->
     <div class="top-bar">
         <div class="container">
-            <a href="tel:+14805551234">📞 Need Help? Call Us: (480) 555-1234</a>
+            <a href="tel:+14807972724">📞 Need Help? Call Carol: (480) 797-2724</a>
         </div>
     </div>
-
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>Thank You for Trusting Us — Would You Leave a Review?</h1>
             <p class="hero-subhead">It takes 60 seconds and it means the world to our family.</p>
-
             <div class="button-stack">
-                <a href="https://g.page/r/CarolRoyse/review" class="review-button google" target="_blank" rel="noopener">
+                <a href="https://g.page/r/CazFWDku9mezEBM/review" class="review-button google" target="_blank" rel="noopener">
                     <svg class="button-icon" viewBox="0 0 24 24" fill="white"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-                    <span class="button-text">
-                        <span class="button-main">Leave a Google Review</span>
-                        <span class="button-sub">Fastest — 60 seconds</span>
-                    </span>
+                    <span class="button-text"><span class="button-main">Leave a Google Review</span><span class="button-sub">Fastest — 60 seconds</span></span>
                 </a>
-
-                <a href="https://www.zillow.com/profile/Carol-Royse/" class="review-button zillow" target="_blank" rel="noopener">
+                <a href="https://www.zillow.com/reviews/write/?s=X1-ZUz6e5glezc9ah_2qbsr" class="review-button zillow" target="_blank" rel="noopener">
                     <svg class="button-icon" viewBox="0 0 24 24" fill="white"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                    <span class="button-text">
-                        <span class="button-main">Leave a Zillow Review</span>
-                        <span class="button-sub">2 minutes</span>
-                    </span>
+                    <span class="button-text"><span class="button-main">Leave a Zillow Review</span><span class="button-sub">2 minutes</span></span>
                 </a>
-
-                <a href="https://www.realtor.com/realestateagents/Carol-Royse/" class="review-button realtor" target="_blank" rel="noopener">
+                <a href="https://www.realtor.com/realestateagents/56739e8789a689010069ae8d" class="review-button realtor" target="_blank" rel="noopener">
                     <svg class="button-icon" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    <span class="button-text">
-                        <span class="button-main">Leave a Realtor.com Review</span>
-                        <span class="button-sub">2 minutes</span>
-                    </span>
+                    <span class="button-text"><span class="button-main">Leave a Realtor.com Review</span><span class="button-sub">2 minutes</span></span>
                 </a>
             </div>
-
             <p class="help-text">Not sure which to pick? Google is the best place to start.</p>
             <div class="hero-badge">Google • Zillow • Realtor.com — Any of them helps!</div>
         </div>
     </section>
-
-    <!-- Personal Note -->
     <section class="personal-note">
         <div class="container">
             <p>Hi, it's Carol. When you trusted us with your home sale or purchase, you didn't just become a client — you became part of our extended family. Every review you leave helps another family find their way home.</p>
@@ -584,34 +113,26 @@
             <p class="signature">If you scrolled this far, thank you — and if you haven't clicked a button yet, any one of the three above helps us enormously.<br><br>— Carol & The Royse Family</p>
         </div>
     </section>
-
-    <!-- Why It Matters -->
     <section class="why-matters">
         <div class="container">
             <h2>Why Your Review Matters</h2>
-
             <div class="why-block">
                 <h3>It helps us keep our doors open.</h3>
                 <p>Reviews are how new families find us. Every review brings us one step closer to serving someone like you.</p>
             </div>
-
             <div class="why-block">
                 <h3>It helps the next family feel safe.</h3>
                 <p>People read reviews before making the biggest financial decision of their life. Your words help them feel confident choosing us.</p>
             </div>
-
             <div class="why-block">
                 <h3>It helps us show up online.</h3>
                 <p>Google, Zillow, and even the tools your grandkids use (like ChatGPT) all look at reviews to decide which agents to recommend. Without them, we become invisible.</p>
             </div>
         </div>
     </section>
-
-    <!-- Instructions -->
     <section class="instructions">
         <div class="container">
             <h2>Need Help? Tap a Platform Below for Step-by-Step Instructions</h2>
-
             <div class="accordion">
                 <div class="accordion-item">
                     <button class="accordion-header" onclick="toggleAccordion(this)">
@@ -626,12 +147,9 @@
                             <li>Write a few sentences about your experience in the box</li>
                             <li>Tap "Post" — you're done!</li>
                         </ol>
-                        <a href="https://g.page/r/CarolRoyse/review" class="review-button google" target="_blank" style="margin-top: 24px;">
-                            <span class="button-main">Leave Google Review Now</span>
-                        </a>
+                        <a href="https://g.page/r/CazFWDku9mezEBM/review" class="review-button google" target="_blank" style="margin-top: 24px;"><span class="button-main">Leave Google Review Now</span></a>
                     </div>
                 </div>
-
                 <div class="accordion-item">
                     <button class="accordion-header" onclick="toggleAccordion(this)">
                         <span>Zillow Review Instructions</span>
@@ -645,12 +163,9 @@
                             <li>Share a few details about working with us</li>
                             <li>Tap "Submit Review" — thank you!</li>
                         </ol>
-                        <a href="https://www.zillow.com/profile/Carol-Royse/" class="review-button zillow" target="_blank" style="margin-top: 24px;">
-                            <span class="button-main">Leave Zillow Review Now</span>
-                        </a>
+                        <a href="https://www.zillow.com/reviews/write/?s=X1-ZUz6e5glezc9ah_2qbsr" class="review-button zillow" target="_blank" style="margin-top: 24px;"><span class="button-main">Leave Zillow Review Now</span></a>
                     </div>
                 </div>
-
                 <div class="accordion-item">
                     <button class="accordion-header" onclick="toggleAccordion(this)">
                         <span>Realtor.com Review Instructions</span>
@@ -664,46 +179,36 @@
                             <li>Tell others about your experience</li>
                             <li>Submit your review</li>
                         </ol>
-                        <a href="https://www.realtor.com/realestateagents/Carol-Royse/" class="review-button realtor" target="_blank" style="margin-top: 24px;">
-                            <span class="button-main">Leave Realtor.com Review Now</span>
-                        </a>
+                        <a href="https://www.realtor.com/realestateagents/56739e8789a689010069ae8d" class="review-button realtor" target="_blank" style="margin-top: 24px;"><span class="button-main">Leave Realtor.com Review Now</span></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- What to Write -->
     <section class="prompts">
         <div class="container">
             <h2>Not Sure What to Say? Here Are Some Ideas</h2>
             <p class="prompt-intro">You don't have to write a lot. Two or three sentences is plenty.</p>
-
             <ul class="prompt-list">
                 <li>What you were going through when we helped you (selling the family home, downsizing, buying your first house, etc.)</li>
                 <li>Who on the team you worked with</li>
                 <li>One thing that stood out about working with us</li>
                 <li>Whether you'd recommend us to friends or family</li>
             </ul>
-
             <div class="sample-review">
                 <h4>Example Review (3 sentences):</h4>
                 <blockquote>"Carol helped us sell our home of 30 years when we were ready to downsize. She made a stressful process feel easy and got us more than we expected. I already recommended her to my sister!"</blockquote>
             </div>
         </div>
     </section>
-
-    <!-- Concern Section -->
     <section class="concern">
         <div class="container">
             <h2>If Your Experience Wasn't What You'd Hoped</h2>
             <p>We want to hear from you directly before anything else. Give us a chance to make it right.</p>
-            <a href="tel:+14805551234" class="concern-phone">(480) 555-1234</a>
+            <a href="tel:+14807972724" class="concern-phone">(480) 797-2724</a>
             <p class="concern-name">Ask for Carol — I'll personally take your call</p>
         </div>
     </section>
-
-    <!-- Thank You Section -->
     <section class="thank-you">
         <div class="container">
             <img src="images/royse-family.jpg" alt="The Royse Family" class="family-photo" onerror="this.style.display='none'">
@@ -713,48 +218,34 @@
             <div class="legacy-stat">30+ Years • 9,000+ Arizona Families • Still Family-Owned</div>
         </div>
     </section>
-
-    <!-- Footer CTA -->
     <section class="footer-cta">
         <div class="container">
             <h3>Ready to Leave Your Review?</h3>
             <div class="button-stack">
-                <a href="https://g.page/r/CarolRoyse/review" class="review-button google" target="_blank" rel="noopener">
-                    <span class="button-main">Leave a Google Review</span>
-                </a>
-                <a href="https://www.zillow.com/profile/Carol-Royse/" class="review-button zillow" target="_blank" rel="noopener">
-                    <span class="button-main">Leave a Zillow Review</span>
-                </a>
-                <a href="https://www.realtor.com/realestateagents/Carol-Royse/" class="review-button realtor" target="_blank" rel="noopener">
-                    <span class="button-main">Leave a Realtor.com Review</span>
-                </a>
+                <a href="https://g.page/r/CazFWDku9mezEBM/review" class="review-button google" target="_blank" rel="noopener"><span class="button-main">Leave a Google Review</span></a>
+                <a href="https://www.zillow.com/reviews/write/?s=X1-ZUz6e5glezc9ah_2qbsr" class="review-button zillow" target="_blank" rel="noopener"><span class="button-main">Leave a Zillow Review</span></a>
+                <a href="https://www.realtor.com/realestateagents/56739e8789a689010069ae8d" class="review-button realtor" target="_blank" rel="noopener"><span class="button-main">Leave a Realtor.com Review</span></a>
             </div>
         </div>
     </section>
-
-    <!-- Contact Info -->
     <section class="contact-info">
         <div class="container">
             <p><strong>Carol Royse Team</strong></p>
             <p>Your Home Sold Guaranteed Realty</p>
             <p>📍 Gilbert, AZ</p>
-            <p>📞 <a href="tel:+14805551234">(480) 555-1234</a></p>
-            <p>🌐 <a href="https://carolroyserealestategroup.com">carolroyserealestategroup.com</a></p>
+            <p>📞 <a href="tel:+14806225569">(480) 622-5569</a> (Customer Service)</p>
+            <p>📞 <a href="tel:+14807972724">(480) 797-2724</a> (Carol Direct)</p>
+            <p>🌐 <a href="https://CarolRoyseTeam.com">CarolRoyseTeam.com</a></p>
         </div>
     </section>
-
     <script>
         function toggleAccordion(button) {
             const item = button.parentElement;
             const isActive = item.classList.contains('active');
-            
-            // Close all
             document.querySelectorAll('.accordion-item').forEach(i => {
                 i.classList.remove('active');
                 i.querySelector('.accordion-icon').textContent = '+';
             });
-            
-            // Open clicked if it wasn't active
             if (!isActive) {
                 item.classList.add('active');
                 button.querySelector('.accordion-icon').textContent = '−';
