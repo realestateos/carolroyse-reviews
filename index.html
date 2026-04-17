@@ -12,68 +12,93 @@
             box-sizing: border-box;
         }
 
+        html {
+            font-size: 20px;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             font-size: 20px;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #1a1a1a;
             background: #ffffff;
         }
 
         .container {
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 0 24px;
+        }
+
+        /* Header with Phone */
+        .top-bar {
+            background: #0F1923;
+            padding: 12px 0;
+            text-align: center;
+            border-bottom: 2px solid #E8500A;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .top-bar a:hover {
+            color: #E8500A;
         }
 
         /* Hero Section */
         .hero {
             background: #0F1923;
-            padding: 60px 0 40px;
+            padding: 60px 0 48px;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 32px;
-            font-weight: 700;
+            font-size: 36px;
+            font-weight: 800;
             color: #ffffff;
             line-height: 1.3;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .hero-subhead {
-            font-size: 20px;
+            font-size: 22px;
             color: rgba(255,255,255,0.9);
-            margin-bottom: 40px;
+            margin-bottom: 48px;
+            line-height: 1.5;
         }
 
         .button-stack {
             display: flex;
             flex-direction: column;
             gap: 20px;
-            max-width: 500px;
-            margin: 0 auto 24px;
+            max-width: 600px;
+            margin: 0 auto 32px;
         }
 
         .review-button {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 16px;
-            min-height: 80px;
-            padding: 20px 24px;
+            gap: 20px;
+            min-height: 100px;
+            padding: 24px 28px;
             border-radius: 12px;
             text-decoration: none;
-            font-size: 22px;
-            font-weight: 700;
+            font-size: 24px;
+            font-weight: 800;
             color: #ffffff;
             border: 3px solid transparent;
             transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
         }
 
         .review-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
 
         .review-button.google {
@@ -92,8 +117,8 @@
         }
 
         .button-icon {
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 40px;
             flex-shrink: 0;
         }
 
@@ -107,104 +132,97 @@
 
         .button-sub {
             display: block;
-            font-size: 14px;
-            font-weight: 500;
-            opacity: 0.9;
-            margin-top: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            opacity: 0.95;
+            margin-top: 6px;
         }
 
         .help-text {
-            font-size: 16px;
-            color: rgba(255,255,255,0.7);
-            margin-top: 16px;
+            font-size: 20px;
+            color: rgba(255,255,255,0.8);
+            margin-top: 24px;
+            line-height: 1.5;
         }
 
-        .help-text a {
-            color: #E8500A;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .phone-link {
+        .hero-badge {
             display: inline-block;
-            margin-top: 12px;
+            margin-top: 24px;
             padding: 12px 24px;
             background: rgba(255,255,255,0.1);
             border-radius: 8px;
-            color: #ffffff;
-            text-decoration: none;
+            color: rgba(255,255,255,0.9);
             font-size: 18px;
-            font-weight: 600;
-        }
-
-        .phone-link:hover {
-            background: rgba(255,255,255,0.2);
         }
 
         /* Personal Note Section */
         .personal-note {
-            padding: 48px 0;
+            padding: 64px 0;
             background: #f8f9fa;
         }
 
         .personal-note p {
-            font-size: 20px;
+            font-size: 22px;
             color: #333;
-            margin-bottom: 16px;
+            margin-bottom: 24px;
+            line-height: 1.7;
         }
 
         .personal-note .signature {
             font-style: italic;
-            color: #666;
-            margin-top: 24px;
+            color: #555;
+            margin-top: 32px;
+            font-size: 20px;
         }
 
         /* Why It Matters */
         .why-matters {
-            padding: 48px 0;
+            padding: 64px 0;
             background: #ffffff;
         }
 
         .why-matters h2 {
-            font-size: 28px;
-            font-weight: 700;
+            font-size: 32px;
+            font-weight: 800;
             text-align: center;
-            margin-bottom: 32px;
+            margin-bottom: 40px;
             color: #0F1923;
         }
 
         .why-block {
-            margin-bottom: 24px;
-            padding: 24px;
+            margin-bottom: 28px;
+            padding: 28px;
             background: #f0f7ff;
             border-radius: 12px;
-            border-left: 4px solid #006AFF;
+            border-left: 5px solid #006AFF;
         }
 
         .why-block h3 {
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 24px;
+            font-weight: 800;
             color: #006AFF;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
 
         .why-block p {
-            font-size: 18px;
+            font-size: 20px;
             color: #333;
             margin: 0;
+            line-height: 1.6;
         }
 
         /* Instructions Section */
         .instructions {
-            padding: 48px 0;
+            padding: 64px 0;
             background: #f8f9fa;
         }
 
         .instructions h2 {
-            font-size: 24px;
-            font-weight: 700;
+            font-size: 26px;
+            font-weight: 800;
             text-align: center;
-            margin-bottom: 24px;
+            margin-bottom: 32px;
+            line-height: 1.4;
         }
 
         .accordion {
@@ -214,24 +232,24 @@
 
         .accordion-item {
             background: #ffffff;
-            margin-bottom: 12px;
-            border-radius: 8px;
+            margin-bottom: 16px;
+            border-radius: 12px;
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         .accordion-header {
             width: 100%;
-            padding: 20px 24px;
+            padding: 24px 28px;
             background: #ffffff;
             border: none;
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 22px;
+            font-weight: 800;
             text-align: left;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #eee;
         }
 
         .accordion-header:hover {
@@ -239,23 +257,21 @@
         }
 
         .accordion-icon {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: 300;
             color: #E8500A;
+            width: 40px;
+            text-align: center;
         }
 
         .accordion-content {
             display: none;
-            padding: 24px;
+            padding: 28px;
             background: #ffffff;
         }
 
         .accordion-item.active .accordion-content {
             display: block;
-        }
-
-        .accordion-item.active .accordion-icon {
-            transform: rotate(45deg);
         }
 
         .step-list {
@@ -265,10 +281,11 @@
 
         .step-list li {
             counter-increment: step;
-            margin-bottom: 16px;
-            padding-left: 48px;
+            margin-bottom: 20px;
+            padding-left: 56px;
             position: relative;
-            font-size: 18px;
+            font-size: 20px;
+            line-height: 1.6;
         }
 
         .step-list li::before {
@@ -276,159 +293,252 @@
             position: absolute;
             left: 0;
             top: 0;
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 40px;
             background: #E8500A;
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 14px;
+            font-weight: 800;
+            font-size: 18px;
         }
 
         /* What to Write */
         .prompts {
-            padding: 48px 0;
+            padding: 64px 0;
             background: #ffffff;
         }
 
         .prompts h2 {
-            font-size: 28px;
-            font-weight: 700;
+            font-size: 32px;
+            font-weight: 800;
             text-align: center;
             margin-bottom: 24px;
             color: #0F1923;
         }
 
         .prompt-intro {
-            font-size: 20px;
+            font-size: 22px;
             text-align: center;
-            color: #666;
-            margin-bottom: 32px;
+            color: #555;
+            margin-bottom: 40px;
         }
 
         .prompt-list {
             list-style: none;
-            margin-bottom: 32px;
+            margin-bottom: 40px;
         }
 
         .prompt-list li {
-            padding: 16px 16px 16px 48px;
-            margin-bottom: 12px;
+            padding: 20px 20px 20px 56px;
+            margin-bottom: 16px;
             background: #f8f9fa;
-            border-radius: 8px;
-            font-size: 18px;
+            border-radius: 10px;
+            font-size: 20px;
             position: relative;
+            line-height: 1.5;
         }
 
         .prompt-list li::before {
             content: "✓";
             position: absolute;
-            left: 16px;
-            top: 16px;
+            left: 20px;
+            top: 20px;
             color: #22c55e;
-            font-weight: 700;
-            font-size: 20px;
+            font-weight: 800;
+            font-size: 24px;
         }
 
         .sample-review {
             background: #fffbeb;
-            border: 2px solid #f59e0b;
+            border: 3px solid #f59e0b;
             border-radius: 12px;
-            padding: 24px;
-            margin-top: 24px;
+            padding: 32px;
+            margin-top: 32px;
         }
 
         .sample-review h4 {
-            font-size: 16px;
-            font-weight: 700;
+            font-size: 20px;
+            font-weight: 800;
             color: #92400e;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .sample-review blockquote {
-            font-size: 18px;
+            font-size: 20px;
             font-style: italic;
             color: #333;
             margin: 0;
+            line-height: 1.6;
         }
 
         /* Concern Section */
         .concern {
-            padding: 48px 0;
+            padding: 64px 0;
             background: #fef2f2;
             text-align: center;
         }
 
         .concern h2 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 16px;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
             color: #991b1b;
         }
 
-        .concern p {
-            font-size: 20px;
+        .concern > p {
+            font-size: 22px;
             color: #333;
-            margin-bottom: 24px;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
         }
 
         .concern-phone {
             display: inline-block;
-            padding: 16px 32px;
+            padding: 20px 40px;
             background: #dc2626;
             color: white;
             text-decoration: none;
-            border-radius: 8px;
-            font-size: 22px;
-            font-weight: 700;
+            border-radius: 12px;
+            font-size: 26px;
+            font-weight: 800;
         }
 
         .concern-phone:hover {
             background: #b91c1c;
         }
 
-        /* Footer */
-        footer {
-            padding: 32px 0;
+        .concern-name {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #555;
+        }
+
+        /* Thank You Section */
+        .thank-you {
+            padding: 80px 0;
             background: #0F1923;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .family-photo {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #E8500A;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .thank-you h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .thank-you p {
+            font-size: 24px;
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.5;
+        }
+
+        .thank-you .signature {
+            font-size: 28px;
+            font-weight: 700;
+            color: #E8500A;
+            margin-bottom: 32px;
+        }
+
+        .legacy-stat {
+            font-size: 20px;
+            color: rgba(255,255,255,0.8);
+            padding: 20px 32px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            display: inline-block;
+        }
+
+        /* Footer */
+        .footer-cta {
+            padding: 64px 0;
+            background: #f8f9fa;
             text-align: center;
         }
 
-        footer p {
-            color: rgba(255,255,255,0.6);
-            font-size: 16px;
+        .footer-cta h3 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 32px;
+            color: #0F1923;
         }
 
-        footer a {
+        .contact-info {
+            padding: 48px 0;
+            background: #0F1923;
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .contact-info p {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .contact-info a {
             color: #E8500A;
             text-decoration: none;
+            font-weight: 700;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
         }
 
         /* Mobile adjustments */
         @media (max-width: 768px) {
-            body {
+            html {
                 font-size: 18px;
             }
 
             .hero h1 {
-                font-size: 28px;
+                font-size: 30px;
             }
 
             .review-button {
-                font-size: 20px;
-                min-height: 72px;
+                font-size: 22px;
+                min-height: 88px;
+                padding: 20px 24px;
             }
 
-            .why-block h3 {
-                font-size: 18px;
+            .button-icon {
+                width: 36px;
+                height: 36px;
+            }
+
+            .family-photo {
+                width: 220px;
+                height: 220px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Top Bar with Phone -->
+    <div class="top-bar">
+        <div class="container">
+            <a href="tel:+14805551234">📞 Need Help? Call Us: (480) 555-1234</a>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -462,7 +572,7 @@
             </div>
 
             <p class="help-text">Not sure which to pick? Google is the best place to start.</p>
-            <a href="tel:+14805551234" class="phone-link">📞 Need help? Call us</a>
+            <div class="hero-badge">Google • Zillow • Realtor.com — Any of them helps!</div>
         </div>
     </section>
 
@@ -516,7 +626,7 @@
                             <li>Write a few sentences about your experience in the box</li>
                             <li>Tap "Post" — you're done!</li>
                         </ol>
-                        <a href="https://g.page/r/CarolRoyse/review" class="review-button google" target="_blank" style="margin-top: 20px;">
+                        <a href="https://g.page/r/CarolRoyse/review" class="review-button google" target="_blank" style="margin-top: 24px;">
                             <span class="button-main">Leave Google Review Now</span>
                         </a>
                     </div>
@@ -535,7 +645,7 @@
                             <li>Share a few details about working with us</li>
                             <li>Tap "Submit Review" — thank you!</li>
                         </ol>
-                        <a href="https://www.zillow.com/profile/Carol-Royse/" class="review-button zillow" target="_blank" style="margin-top: 20px;">
+                        <a href="https://www.zillow.com/profile/Carol-Royse/" class="review-button zillow" target="_blank" style="margin-top: 24px;">
                             <span class="button-main">Leave Zillow Review Now</span>
                         </a>
                     </div>
@@ -554,7 +664,7 @@
                             <li>Tell others about your experience</li>
                             <li>Submit your review</li>
                         </ol>
-                        <a href="https://www.realtor.com/realestateagents/Carol-Royse/" class="review-button realtor" target="_blank" style="margin-top: 20px;">
+                        <a href="https://www.realtor.com/realestateagents/Carol-Royse/" class="review-button realtor" target="_blank" style="margin-top: 24px;">
                             <span class="button-main">Leave Realtor.com Review Now</span>
                         </a>
                     </div>
@@ -586,18 +696,52 @@
     <!-- Concern Section -->
     <section class="concern">
         <div class="container">
-            <h2>Something Not Go Perfectly?</h2>
-            <p>If anything about your experience wasn't 5-star worthy, please give us a chance to make it right. Call us directly — we'd rather fix the problem than lose your trust.</p>
-            <a href="tel:+14805551234" class="concern-phone">Call Carol: (480) 555-1234</a>
+            <h2>If Your Experience Wasn't What You'd Hoped</h2>
+            <p>We want to hear from you directly before anything else. Give us a chance to make it right.</p>
+            <a href="tel:+14805551234" class="concern-phone">(480) 555-1234</a>
+            <p class="concern-name">Ask for Carol — I'll personally take your call</p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Thank You Section -->
+    <section class="thank-you">
         <div class="container">
-            <p>© 2026 Carol Royse Team | <a href="https://carolroyserealestategroup.com">carolroyserealestategroup.com</a></p>
+            <img src="images/royse-family.jpg" alt="The Royse Family" class="family-photo" onerror="this.style.display='none'">
+            <h2>Thank You From the Bottom of Our Hearts</h2>
+            <p>Whether you left a review or just visited this page, thank you for being part of our story.</p>
+            <p class="signature">— The Royse Family</p>
+            <div class="legacy-stat">30+ Years • 9,000+ Arizona Families • Still Family-Owned</div>
         </div>
-    </footer>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+        <div class="container">
+            <h3>Ready to Leave Your Review?</h3>
+            <div class="button-stack">
+                <a href="https://g.page/r/CarolRoyse/review" class="review-button google" target="_blank" rel="noopener">
+                    <span class="button-main">Leave a Google Review</span>
+                </a>
+                <a href="https://www.zillow.com/profile/Carol-Royse/" class="review-button zillow" target="_blank" rel="noopener">
+                    <span class="button-main">Leave a Zillow Review</span>
+                </a>
+                <a href="https://www.realtor.com/realestateagents/Carol-Royse/" class="review-button realtor" target="_blank" rel="noopener">
+                    <span class="button-main">Leave a Realtor.com Review</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+        <div class="container">
+            <p><strong>Carol Royse Team</strong></p>
+            <p>Your Home Sold Guaranteed Realty</p>
+            <p>📍 Gilbert, AZ</p>
+            <p>📞 <a href="tel:+14805551234">(480) 555-1234</a></p>
+            <p>🌐 <a href="https://carolroyserealestategroup.com">carolroyserealestategroup.com</a></p>
+        </div>
+    </section>
 
     <script>
         function toggleAccordion(button) {
