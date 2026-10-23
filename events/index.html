@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Client Events | Carol Royse Team</title>
-<meta name="description" content="Upcoming client appreciation events from the Carol Royse Team. Happy hours, investor workshops, Pie Day and more. RSVP today.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -12,11 +11,12 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://carolroysereviews.com/events/">
 <meta property="og:title" content="You're Invited! Carol Royse Team Client Events">
-<meta property="og:description" content="Happy hours, investor workshops, Pie Day and more. Our thank-you to the clients who make it all possible. RSVP today.">
+<meta property="og:description" content="Happy hours, investor workshops, Carol's Pie for Your Table and more. Our thank-you to the clients who make it all possible. RSVP today.">
 <meta property="og:image" content="https://carolroysereviews.com/events/og-events.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Upcoming client appreciation events from the Carol Royse Team. Happy hours, investor workshops, Carol's Pie for Your Table and more. RSVP today.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -120,7 +120,7 @@
     <img src="crt-logo.png" alt="Carol Royse Team, Your Home Sold Guaranteed Realty" class="logo">
     <div class="brand">Client Events</div>
     <h1>You're invited. All year long.</h1>
-    <p>Happy hours, investor workshops, Pie Day and more. Our way of saying thank you to the clients and friends who make what we do possible. Bring a friend!</p>
+    <p>Happy hours, investor workshops, Carol's Pie for Your Table and more. Our way of saying thank you to the clients and friends who make what we do possible. Bring a friend!</p>
     <a href="#events" class="btn btn-gold">See upcoming events ↓</a>
     <a href="CRT_Client_Events_2026-2027.pdf" class="btn btn-ghost" download>Download the calendar (PDF)</a>
   </div>
@@ -177,12 +177,15 @@
 /* =========================================================
    SETTINGS — edit these
    ========================================================= */
-const OFFICE_ADDRESS = "Carol Royse Team Office";   // ← full office address pending Derek's confirmation
+const OFFICE_ADDRESS = "7890 S Hardy Dr, Ste 106, Tempe, AZ 85284";
+const PIE_FORM = "https://docs.google.com/forms/d/e/1FAIpQLScB_0xEDQEd_KnOlMKvh9p7XAZ6Vxjjx76MgEr1onnTjDAJ-A/viewform?usp=header";  // Carol's Pie for Your Table reservations (Google Form)
 const RSVP_ENDPOINT  = "https://mcp.realestateos.com/api/crt-events/rsvp";
 
 /* Event list: add, remove or edit lines. Times are Arizona time. */
 const EVENTS = [
-  { date:"2026-11-24", start:"16:30", end:"18:00", title:"Pie Day",                         type:"Pop-By",   desc:"Swing by the office and pick up a pie for your Thanksgiving table. On us!" },
+  { date:"2026-11-23", start:"16:00", end:"18:00", title:"Carol's Pie for Your Table: Scottsdale Pickup", type:"Holiday", desc:"Everyone gets a free pie! Choose pumpkin or apple and pick it up in Scottsdale.", location:"Title Alliance of Arizona LLC, 6991 E Camelback Rd, Suite C230, Scottsdale, AZ 85251", rsvpUrl:PIE_FORM, rsvpLabel:"Reserve your pie", rsvpBy:"RSVP by Thu, Nov 19" },
+  { date:"2026-11-23", start:"16:00", end:"18:00", title:"Carol's Pie for Your Table: Glendale Pickup", type:"Holiday", desc:"Everyone gets a free pie! Choose pumpkin or apple and pick it up in Glendale.", location:"TA Conference Room, 20241 N 67th Ave, A101, Glendale, AZ 85308", rsvpUrl:PIE_FORM, rsvpLabel:"Reserve your pie", rsvpBy:"RSVP by Thu, Nov 19" },
+  { date:"2026-11-24", start:"16:00", end:"18:30", title:"Carol's Pie for Your Table: The Big Pie Party", type:"Holiday", desc:"Everyone gets a free pie! Pick up your pumpkin or apple pie and stay for complimentary Italian pasta, sodas, hot cocoa and specialty coffees. Season of Giving: please bring a non-perishable item to give to those in need.", rsvpUrl:PIE_FORM, rsvpLabel:"Reserve your pie", rsvpBy:"RSVP by Thu, Nov 19" },
   { date:"2027-01-14", start:"16:00", end:"18:00", title:"Happy Hour",                      type:"Social",   desc:"Kick off the new year with drinks, bites and great company." },
   { date:"2027-01-21", start:"18:00", end:"20:00", title:"Investor Workshop",               type:"Workshop", desc:"Learn how to build wealth through Arizona real estate. Rentals, equity and what the market is doing right now." },
   { date:"2027-02-11", start:"16:00", end:"18:00", title:"Valentine Flowers",               type:"Pop-By",   desc:"Stop by the office and pick up fresh flowers for your Valentine." },
@@ -196,10 +199,12 @@ const EVENTS = [
   { date:"2027-09-16", start:"16:00", end:"18:00", title:"Football Kickoff Tailgate",       type:"Social",   desc:"Wear your team colors and kick off football season with us." },
   { date:"2027-10-14", start:"16:00", end:"18:00", title:"Happy Hour",                      type:"Social",   desc:"Fall happy hour with the team." },
   { date:"2027-10-21", start:"18:00", end:"20:00", title:"Investor Workshop",               type:"Workshop", desc:"Plan your next move before the new year." },
-  { date:"2027-11-23", start:"16:30", end:"18:00", title:"Pie Day",                         type:"Pop-By",   desc:"Our favorite tradition is back. Pick up a pie for Thanksgiving!" },
+  { date:"2027-11-23", start:"16:30", end:"18:00", title:"Carol's Pie for Your Table",      type:"Holiday",  desc:"Our annual tradition is back. Everyone gets a free pie for their Thanksgiving table!" },
 ];
 /* ========================================================= */
 
+const loc=e=>e.location||OFFICE_ADDRESS;
+const rsvpBtn=(e,cls)=>e.rsvpUrl?`<a class="btn ${cls}" href="${esc(e.rsvpUrl)}" target="_blank" rel="noopener">${esc(e.rsvpLabel||"RSVP")}</a>`:`<button class="btn ${cls}" data-rsvp="${e.id}">RSVP</button>`;
 const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const AZ_OFFSET="-07:00"; // Arizona has no daylight saving time
@@ -220,7 +225,7 @@ function renderNext(){
     <div><div class="next-label">Next up</div><div class="next-title">${esc(e.title)}</div>
     <div class="meta">${fmtLong(e)} · ${fmtTime(e.start)}${e.end?"–"+fmtTime(e.end):""}</div></div>
     <div class="countdown" id="cd"></div>
-    <button class="btn btn-gold" data-rsvp="${e.id}">RSVP</button></div>`;
+    ${rsvpBtn(e,"btn-gold")}</div>`;
   const tick=()=>{let s=Math.max(0,(toDate(e,e.start)-new Date())/1000);
     const d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60);
     document.getElementById("cd").innerHTML=[[d,"days"],[h,"hrs"],[m,"min"]].map(([v,l])=>`<div class="cd"><b>${v}</b><span>${l}</span></div>`).join("")};
@@ -246,9 +251,10 @@ function renderGrid(){
         <div class="meta">${fmtLong(e).split(",")[0]} · ${fmtTime(e.start)}${e.end?"–"+fmtTime(e.end):""}</div></div>
       </div>
       <p>${esc(e.desc)}</p>
-      <div class="meta">📍 ${esc(OFFICE_ADDRESS)}</div>
+      ${e.rsvpBy?`<div class="meta" style="color:var(--gold);font-weight:600">⏰ ${esc(e.rsvpBy)}</div>`:""}
+      <div class="meta">📍 <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc(e))}" target="_blank" rel="noopener">${esc(loc(e))}</a></div>
       <div class="card-actions">
-        <button class="btn btn-navy" data-rsvp="${e.id}">RSVP</button>
+        ${rsvpBtn(e,"btn-navy")}
         <button class="btn btn-ghost" data-ics="${e.id}">Add to calendar</button>
       </div>
     </article>`}).join("");
@@ -261,7 +267,7 @@ function ics(e){
     `UID:crt-${e.date}-${e.id}@carolroysereviews.com`,`DTSTAMP:${z(new Date())}`,
     `DTSTART:${z(toDate(e,e.start))}`,`DTEND:${z(toDate(e,e.end||e.start))}`,
     `SUMMARY:Carol Royse Team ${e.title}`,`DESCRIPTION:${e.desc.replace(/,/g,"\\,")}`,
-    `LOCATION:${OFFICE_ADDRESS.replace(/,/g,"\\,")}`,"END:VEVENT","END:VCALENDAR"].join("\r\n");
+    `LOCATION:${loc(e).replace(/,/g,"\\,")}`,"END:VEVENT","END:VCALENDAR"].join("\r\n");
   const a=document.createElement("a");
   a.href=URL.createObjectURL(new Blob([body],{type:"text/calendar"}));
   a.download=`CRT-${e.title.replace(/\W+/g,"-")}-${e.date}.ics`; a.click();
