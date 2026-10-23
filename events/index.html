@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Carol's Client Appreciation Events | Carol Royse Team</title>
+<title>Client Appreciation Events | Carol Royse Team</title>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#BE0404">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://carolroysereviews.com/events/">
-<meta property="og:title" content="You're Invited! Carol's Client Appreciation Events">
-<meta property="og:description" content="Happy hours, investor workshops, Carol's Pie for Your Table and more. Our thank-you to the clients who make it all possible. RSVP today.">
+<meta property="og:title" content="You're Invited! Client Appreciation Events">
+<meta property="og:description" content="Happy hours, investor workshops, Thanksgiving Pie for Your Table and more. Our thank-you to the clients who make it all possible. RSVP today.">
 <meta property="og:image" content="https://carolroysereviews.com/events/og-events.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="description" content="Upcoming client appreciation events from the Carol Royse Team. Happy hours, investor workshops, Carol's Pie for Your Table and more. RSVP today.">
+<meta name="description" content="Upcoming client appreciation events from the Carol Royse Team. Happy hours, investor workshops, Thanksgiving Pie for Your Table and more. RSVP today.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -137,8 +137,8 @@
   <div class="wrap hero-inner">
     <img src="crt-logo.png" alt="Carol Royse Team, Your Home Sold Guaranteed Realty" class="logo">
     <h1>You're Invited!</h1>
-    <div class="subhead">Carol's Client Appreciation Events</div>
-    <p>Happy hours, investor workshops, Carol's Pie for Your Table and more. Our way of saying thank you to the clients and friends who make what we do possible. Bring a friend!</p>
+    <div class="subhead">Client Appreciation Events</div>
+    <p>Happy hours, investor workshops, Thanksgiving Pie for Your Table and more. Our way of saying thank you to the clients and friends who make what we do possible. Bring a friend!</p>
     <a href="#events" class="btn btn-gold">See upcoming events ↓</a>
     <a href="CRT_Client_Events_2026-2027.pdf" class="btn btn-ghost" download>Download the calendar (PDF)</a>
   </div>
@@ -211,36 +211,36 @@
    SETTINGS — edit these
    ========================================================= */
 const OFFICE_ADDRESS = "7890 S Hardy Dr, Ste 106, Tempe, AZ 85284";
-const PIE_FORM = "https://docs.google.com/forms/d/e/1FAIpQLScB_0xEDQEd_KnOlMKvh9p7XAZ6Vxjjx76MgEr1onnTjDAJ-A/viewform?usp=header";  // Carol's Pie for Your Table reservations (Google Form)
+const PIE_FORM = "https://docs.google.com/forms/d/e/1FAIpQLScB_0xEDQEd_KnOlMKvh9p7XAZ6Vxjjx76MgEr1onnTjDAJ-A/viewform?usp=header";  // Thanksgiving Pie for Your Table reservations (Google Form)
 const RSVP_ENDPOINT  = "https://mcp.realestateos.com/api/crt-events/rsvp";
 const AVAILABILITY_ENDPOINT = "https://mcp.realestateos.com/api/crt-events/availability"; // GET → {"counts":{"<date>|<title>": <total people>}}
 const LOW_SPOTS_AT = 15;   // show "Only X spots left" at or below this
 
 /* Past-event gallery. Add an entry after each event and the section appears.
-   Example: { title:"Carol's New Year Cheers", date:"2027-01-14", photo:"photos/new-year-cheers.jpg", quote:"So fun!", quoteBy:"The Smith Family" } */
+   Example: { title:"New Year Cheers", date:"2027-01-14", photo:"photos/new-year-cheers.jpg", quote:"So fun!", quoteBy:"The Smith Family" } */
 const GALLERY = [];
 
 /* Event list: add, remove or edit lines. Times are Arizona time. */
 const EVENTS = [
-  { date:"2026-11-23", start:"16:00", end:"18:00", title:"Carol's Pie for Your Table: Scottsdale Pickup", type:"Thanksgiving", desc:"Everyone gets a free pie! Choose pumpkin or apple and pick it up in Scottsdale.", location:"Title Alliance of Arizona LLC, 6991 E Camelback Rd, Suite C230, Scottsdale, AZ 85251", rsvpUrl:PIE_FORM, rsvpLabel:"Reserve your pie", rsvpBy:"RSVP by Thu, Nov 19" },
-  { date:"2026-11-23", start:"16:00", end:"18:00", title:"Carol's Pie for Your Table: Glendale Pickup", type:"Thanksgiving", desc:"Everyone gets a free pie! Choose pumpkin or apple and pick it up in Glendale.", location:"TA Conference Room, 20241 N 67th Ave, A101, Glendale, AZ 85308", rsvpUrl:PIE_FORM, rsvpLabel:"Reserve your pie", rsvpBy:"RSVP by Thu, Nov 19" },
-  { date:"2026-11-24", start:"16:00", end:"18:30", title:"Carol's Pie for Your Table: The Big Pie Party", type:"Thanksgiving", desc:"Everyone gets a free pie! Pick up your pumpkin or apple pie and stay for complimentary Italian pasta, sodas, hot cocoa and specialty coffees. Season of Giving: please bring a non-perishable item to give to those in need.", rsvpUrl:PIE_FORM, rsvpLabel:"Reserve your pie", rsvpBy:"RSVP by Thu, Nov 19" },
-  { date:"2027-01-14", start:"16:00", end:"18:00", title:"Carol's New Year Cheers",                      type:"Happy Hour",   desc:"Our New Year happy hour. Kick off 2027 with drinks, bites and great company at The Keg in Tempe.", location:"The Keg Steakhouse + Bar, 23 S McClintock Dr, Tempe, AZ 85288", capacity:60 },
-  { date:"2027-01-21", start:"18:00", end:"20:00", title:"Carol's Wealth Builder Workshop",               type:"Workshop", desc:"Your 2027 Wealth Plan: how to use the equity in your home to start building a rental portfolio this year.", capacity:40 },
-  { date:"2027-02-11", start:"16:00", end:"18:00", title:"Carol's Valentine Blooms",               type:"Valentine\'s Day",   desc:"Stop by our Tempe office and pick up fresh flowers for your Valentine." },
-  { date:"2027-04-08", start:"16:00", end:"18:00", title:"Carol's Spring Cheers",                      type:"Happy Hour",   desc:"Spring happy hour with the team at The Keg in Chandler. Bring a friend!", location:"The Keg Steakhouse + Bar, 3065 W Chandler Blvd, Chandler, AZ 85226", capacity:60 },
-  { date:"2027-04-15", start:"18:00", end:"20:00", title:"Carol's Wealth Builder Workshop",               type:"Workshop", desc:"Buying Your First Rental: running the numbers, financing options and what to look for in a Phoenix-area investment property.", capacity:40 },
-  { date:"2027-05-06", start:"16:00", end:"18:00", title:"Carol's Bouquet for Mom",            type:"Mother\'s Day",   desc:"Stop by our Tempe office and pick up a bouquet for the moms in your life." },
-  { date:"2027-06-17", start:"16:00", end:"18:00", title:"Carol's Treat for Dad",             type:"Father\'s Day",   desc:"Stop by our Tempe office and grab a little something for the dads in your life." },
-  { date:"2027-07-15", start:"16:00", end:"18:00", title:"Carol's Summer Cheers",                      type:"Happy Hour",   desc:"Beat the heat with cool drinks and good people at The Keg in Tempe.", location:"The Keg Steakhouse + Bar, 23 S McClintock Dr, Tempe, AZ 85288", capacity:60 },
-  { date:"2027-07-22", start:"18:00", end:"20:00", title:"Carol's Wealth Builder Workshop",               type:"Workshop", desc:"Mid-Year Market Update: where prices, rates and rents are heading, plus house hacking and short-term rental strategies.", capacity:40 },
-  { date:"2027-08-21", start:"09:30", end:"12:00", title:"Carol\'s Private Screening: Shrek 5",                       type:"Family",   desc:"We're renting out the theater! Bring the whole family to a private screening of Shrek 5 at Harkins Tempe Marketplace. Doors open at 9:30, movie starts at 10. Popcorn's on us.", location:"Harkins Theatres Tempe Marketplace, 2000 E Rio Salado Pkwy #1160, Tempe, AZ 85288", capacity:150 },
-  { date:"2027-09-16", start:"17:00", end:"19:00", title:"Carol\'s Kickoff Party",       type:"Game Day",   desc:"Wear your team colors and watch Thursday Night Football with us at The Keg in Chandler.", location:"The Keg Steakhouse + Bar, 3065 W Chandler Blvd, Chandler, AZ 85226", capacity:60 },
-  { date:"2027-10-14", start:"16:00", end:"18:00", title:"Carol's Fall Cheers",                      type:"Happy Hour",   desc:"Fall happy hour with the team at The Keg at Desert Ridge.", location:"The Keg Steakhouse + Bar, 21001 N Tatum Blvd, Phoenix, AZ 85050", capacity:60 },
-  { date:"2027-10-21", start:"18:00", end:"20:00", title:"Carol's Wealth Builder Workshop",               type:"Workshop", desc:"Year-End Investor Moves: 1031 exchanges, cash-out refinancing and planning your next purchase before the new year.", capacity:40 },
-  { date:"2027-11-22", start:"16:00", end:"18:00", title:"Carol's Pie for Your Table: Scottsdale Pickup", type:"Thanksgiving", desc:"Our annual tradition is back! Everyone gets a free pie. Pick yours up in Scottsdale.", location:"Title Alliance of Arizona LLC, 6991 E Camelback Rd, Suite C230, Scottsdale, AZ 85251" },
-  { date:"2027-11-22", start:"16:00", end:"18:00", title:"Carol's Pie for Your Table: Glendale Pickup", type:"Thanksgiving", desc:"Our annual tradition is back! Everyone gets a free pie. Pick yours up in Glendale.", location:"TA Conference Room, 20241 N 67th Ave, A101, Glendale, AZ 85308" },
-  { date:"2027-11-23", start:"16:00", end:"18:30", title:"Carol's Pie for Your Table: The Big Pie Party", type:"Thanksgiving", desc:"Our annual tradition is back! Pick up your free pie and stay for food, drinks and the Season of Giving drive at our Tempe office." },
+  { date:"2026-11-23", start:"16:00", end:"18:00", title:"Thanksgiving Pie for Your Table: Scottsdale Pickup", type:"Thanksgiving", desc:"Everyone gets a free pie! Choose pumpkin or apple and pick it up in Scottsdale.", location:"Title Alliance of Arizona LLC, 6991 E Camelback Rd, Suite C230, Scottsdale, AZ 85251", rsvpUrl:PIE_FORM, rsvpLabel:"Reserve your pie", rsvpBy:"RSVP by Thu, Nov 19" },
+  { date:"2026-11-23", start:"16:00", end:"18:00", title:"Thanksgiving Pie for Your Table: Glendale Pickup", type:"Thanksgiving", desc:"Everyone gets a free pie! Choose pumpkin or apple and pick it up in Glendale.", location:"TA Conference Room, 20241 N 67th Ave, A101, Glendale, AZ 85308", rsvpUrl:PIE_FORM, rsvpLabel:"Reserve your pie", rsvpBy:"RSVP by Thu, Nov 19" },
+  { date:"2026-11-24", start:"16:00", end:"18:30", title:"Thanksgiving Pie for Your Table: The Big Pie Party", type:"Thanksgiving", desc:"Everyone gets a free pie! Pick up your pumpkin or apple pie and stay for complimentary Italian pasta, sodas, hot cocoa and specialty coffees. Season of Giving: please bring a non-perishable item to give to those in need.", rsvpUrl:PIE_FORM, rsvpLabel:"Reserve your pie", rsvpBy:"RSVP by Thu, Nov 19" },
+  { date:"2027-01-14", start:"16:00", end:"18:00", title:"New Year Cheers",                      type:"Happy Hour",   desc:"Our New Year happy hour. Kick off 2027 with drinks, bites and great company at The Keg in Tempe.", location:"The Keg Steakhouse + Bar, 23 S McClintock Dr, Tempe, AZ 85288", capacity:60 },
+  { date:"2027-01-21", start:"18:00", end:"20:00", title:"Wealth Builder Workshop",               type:"Workshop", desc:"Your 2027 Wealth Plan: how to use the equity in your home to start building a rental portfolio this year.", capacity:40 },
+  { date:"2027-02-11", start:"16:00", end:"18:00", title:"Sweets for Your Sweetheart",               type:"Valentine\'s Day",   desc:"Stop by our Tempe office and pick up a sweet Valentine\'s gift, like chocolates and treats, for the special someone in your life." },
+  { date:"2027-04-08", start:"16:00", end:"18:00", title:"Spring Cheers",                      type:"Happy Hour",   desc:"Spring happy hour with the team at The Keg in Chandler. Bring a friend!", location:"The Keg Steakhouse + Bar, 3065 W Chandler Blvd, Chandler, AZ 85226", capacity:60 },
+  { date:"2027-04-15", start:"18:00", end:"20:00", title:"Wealth Builder Workshop",               type:"Workshop", desc:"Buying Your First Rental: running the numbers, financing options and what to look for in a Phoenix-area investment property.", capacity:40 },
+  { date:"2027-05-06", start:"16:00", end:"18:00", title:"Bouquet for Mom",            type:"Mother\'s Day",   desc:"Stop by our Tempe office and pick up a bouquet for the moms in your life." },
+  { date:"2027-06-17", start:"16:00", end:"18:00", title:"Treat for Dad",             type:"Father\'s Day",   desc:"Stop by our Tempe office and grab a little something for the dads in your life." },
+  { date:"2027-07-15", start:"16:00", end:"18:00", title:"Summer Cheers",                      type:"Happy Hour",   desc:"Beat the heat with cool drinks and good people at The Keg in Tempe.", location:"The Keg Steakhouse + Bar, 23 S McClintock Dr, Tempe, AZ 85288", capacity:60 },
+  { date:"2027-07-22", start:"18:00", end:"20:00", title:"Wealth Builder Workshop",               type:"Workshop", desc:"Mid-Year Market Update: where prices, rates and rents are heading, plus house hacking and short-term rental strategies.", capacity:40 },
+  { date:"2027-08-21", start:"09:30", end:"12:00", title:"Private Screening: Shrek 5",                       type:"Family",   desc:"We're renting out the theater! Bring the whole family to a private screening of Shrek 5 at Harkins Tempe Marketplace. Doors open at 9:30, movie starts at 10. Popcorn's on us.", location:"Harkins Theatres Tempe Marketplace, 2000 E Rio Salado Pkwy #1160, Tempe, AZ 85288", capacity:150 },
+  { date:"2027-09-16", start:"17:00", end:"19:00", title:"Kickoff Party",       type:"Game Day",   desc:"Wear your team colors and watch Thursday Night Football with us at The Keg in Chandler.", location:"The Keg Steakhouse + Bar, 3065 W Chandler Blvd, Chandler, AZ 85226", capacity:60 },
+  { date:"2027-10-14", start:"16:00", end:"18:00", title:"Fall Cheers",                      type:"Happy Hour",   desc:"Fall happy hour with the team at The Keg at Desert Ridge.", location:"The Keg Steakhouse + Bar, 21001 N Tatum Blvd, Phoenix, AZ 85050", capacity:60 },
+  { date:"2027-10-21", start:"18:00", end:"20:00", title:"Wealth Builder Workshop",               type:"Workshop", desc:"Year-End Investor Moves: 1031 exchanges, cash-out refinancing and planning your next purchase before the new year.", capacity:40 },
+  { date:"2027-11-22", start:"16:00", end:"18:00", title:"Thanksgiving Pie for Your Table: Scottsdale Pickup", type:"Thanksgiving", desc:"Our annual tradition is back! Everyone gets a free pie. Pick yours up in Scottsdale.", location:"Title Alliance of Arizona LLC, 6991 E Camelback Rd, Suite C230, Scottsdale, AZ 85251" },
+  { date:"2027-11-22", start:"16:00", end:"18:00", title:"Thanksgiving Pie for Your Table: Glendale Pickup", type:"Thanksgiving", desc:"Our annual tradition is back! Everyone gets a free pie. Pick yours up in Glendale.", location:"TA Conference Room, 20241 N 67th Ave, A101, Glendale, AZ 85308" },
+  { date:"2027-11-23", start:"16:00", end:"18:30", title:"Thanksgiving Pie for Your Table: The Big Pie Party", type:"Thanksgiving", desc:"Our annual tradition is back! Pick up your free pie and stay for food, drinks and the Season of Giving drive at our Tempe office." },
 ];
 /* ========================================================= */
 
