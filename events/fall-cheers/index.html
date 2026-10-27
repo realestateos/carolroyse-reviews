@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fall Cheers | Carol Royse Team Client Events</title>
+<link rel="icon" href="/events/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/events/favicon-32.png">
+<link rel="apple-touch-icon" href="/events/apple-touch-icon.png">
+<meta name="theme-color" content="#BE0404">
+<link rel="canonical" href="https://carolroysereviews.com/events/fall-cheers/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://carolroysereviews.com/events/fall-cheers/">
+<meta property="og:title" content="🍂 You&#x27;re Invited: Fall Cheers">
+<meta property="og:description" content="Fall happy hour with the team at The Keg at Desert Ridge.">
+<meta property="og:image" content="https://carolroysereviews.com/events/og-events.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Fall happy hour with the team at The Keg at Desert Ridge.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/events/events.css">
+</head>
+<body>
+
+<nav class="topnav"><div class="wrap">
+  <a href="/events/"><img src="/events/crt-logo.png" alt="Carol Royse Team"></a>
+  <a class="back" href="/events/">← All client events</a>
+</div></nav>
+
+<header class="ev-hero">
+  <div class="wrap hero-inner">
+    <div class="brand">You're Invited · Client Appreciation Event</div>
+    <h1>Fall Cheers</h1>
+    <p class="lede">Fall happy hour with the team at The Keg at Desert Ridge.</p>
+    <div id="heroDyn"></div>
+  </div>
+</header>
+
+<section class="ev-body"><div class="wrap" id="evBody"></div></section>
+
+<section class="list more" id="more">
+  <div class="wrap">
+    <div class="list-head"><h2>More events coming up</h2><a class="btn btn-ghost" href="/events/">See all events</a></div>
+    <div class="grid" id="moreGrid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="/events/crt-logo.png" alt="Carol Royse Team">
+    <strong>Carol Royse Team</strong> · Your Home Sold Guaranteed Realty<br>
+    Questions about an event? Just reply to your invite or give us a call.
+  </div>
+</footer>
+
+<dialog id="rsvp">
+  <div class="modal-head">
+    <small id="mDate"></small>
+    <h3 id="mTitle"></h3>
+  </div>
+  <div id="mBody">
+    <form id="rsvpForm" novalidate>
+      <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="row">
+        <label>First name<input name="firstName" required autocomplete="given-name"></label>
+        <label>Last name<input name="lastName" required autocomplete="family-name"></label>
+      </div>
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+      <fieldset class="friend">
+        <legend>Bringing a friend? (optional)</legend>
+        <p>Invite a friend or neighbor and we'll save them a spot too.</p>
+        <div class="row">
+          <label>Friend's name<input name="friendName" autocomplete="off"></label>
+          <label>Friend's phone<input name="friendPhone" type="tel" autocomplete="off"></label>
+        </div>
+      </fieldset>
+      <label>Total in your party
+        <select name="guests">
+          <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option>
+        </select>
+      </label>
+      <div class="form-actions">
+        <button type="button" class="btn btn-ghost" id="cancel">Cancel</button>
+        <button type="submit" class="btn btn-gold" id="submitBtn">Save my spot</button>
+      </div>
+    </form>
+  </div>
+</dialog>
+
+<script src="/events/events.js"></script>
+<script>
+const SLUG="fall-cheers"; const S=SERIES[SLUG];
+const mine=upcoming.filter(e=>e.slug===SLUG);
+const DAY=864e5;
+const group=mine.filter(e=>toDate(e,e.start)-toDate(mine[0],mine[0].start)<45*DAY);
+const later=mine.filter(e=>!group.includes(e));
+function renderPage(){
+  const hero=document.getElementById("heroDyn"), body=document.getElementById("evBody");
+  if(!mine.length){
+    hero.innerHTML=`<div class="facts"><div>✅ <span>This one's in the books. Thank you to everyone who came!</span></div></div>
+      <div class="cta"><a class="btn btn-gold" href="/events/">See upcoming events</a></div>`;
+    body.innerHTML="";return;
+  }
+  const f=group[0], multi=group.length>1;
+  const sameForm=multi&&group.every(e=>e.rsvpUrl&&e.rsvpUrl===f.rsvpUrl);
+  const lastD=group[group.length-1];
+  const when=multi&&lastD.date!==f.date?`${fmtLong(f).replace(/, \d{4}$/,"")} – ${fmtLong(lastD)}`:fmtLong(f);
+  hero.innerHTML=`<div class="facts">
+      <div>📅 <span><b>${when}</b>${multi?"":" · "+fmtRange(f)}</span></div>
+      <div>📍 <span>${multi?`<a href="#instances">${group.length} ways to join us. Choose below.</a>`:`<a href="${mapLink(f)}" target="_blank" rel="noopener">${esc(loc(f))}</a>`}</span></div>
+      ${f.rsvpBy?`<div>⏰ <span style="color:var(--gold);font-weight:700">${esc(f.rsvpBy)}</span></div>`:""}
+    </div>
+    ${multi?"":spotsBadge(f)}${multi?"":sponsorLine(f)}
+    <div class="cta">
+      ${multi&&!sameForm?`<a class="btn btn-gold" href="#instances">Choose your spot ↓</a>`:rsvpBtn(f,"btn-gold")}
+      ${multi?"":`<button class="btn btn-ghost" data-ics="${f.id}">Add to calendar</button>`}
+    </div>
+    <div class="countdown" id="cd" style="margin-top:22px"></div>`;
+  startCountdown(f,"cd");
+  let out="";
+  if(multi){
+    out+=`<div class="panel" id="instances"><h2>Choose your location</h2><div class="instances">${group.map(cardHTML).join("")}</div></div>`;
+  }else{
+    out+=`<div class="panel"><h2>About this event</h2><p>${esc(f.desc)}</p>
+      <p class="meta">Bring a friend! When you RSVP, add their name and we'll save them a spot too.</p></div>`;
+  }
+  if(later.length){
+    out+=`<div class="panel"><h2>Can't make it? Save the next date</h2><div class="instances">${later.map(cardHTML).join("")}</div></div>`;
+  }
+  body.innerHTML=out;
+}
+function renderMore(){
+  const seen=new Set([SLUG]), list=[];
+  for(const e of upcoming){ if(!seen.has(e.slug)){ seen.add(e.slug); list.push(e); } if(list.length===3) break; }
+  document.getElementById("moreGrid").innerHTML=list.map(cardHTML).join("");
+  if(!list.length) document.getElementById("more").remove();
+}
+window.onCounts=()=>{renderPage();renderMore()};
+renderPage(); renderMore(); loadCounts();
+</script>
+</body>
+</html>

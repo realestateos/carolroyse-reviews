@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Client Appreciation Events | Carol Royse Team</title>
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="/events/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/events/favicon-32.png">
+<link rel="apple-touch-icon" href="/events/apple-touch-icon.png">
 <meta name="theme-color" content="#BE0404">
+<link rel="canonical" href="https://carolroysereviews.com/events/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://carolroysereviews.com/events/">
 <meta property="og:title" content="You're Invited! Client Appreciation Events">
@@ -16,131 +17,21 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="description" content="Upcoming client appreciation events from the Carol Royse Team. Happy hours, investor workshops, Thanksgiving Pie for Your Table and more. RSVP today.">
+<meta name="description" content="Happy hours, investor workshops, Thanksgiving Pie for Your Table and more. Our thank-you to the clients who make it all possible. RSVP today.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy:#1C85E8; --navy-deep:#111111; --gold:#BE0404; --gold-soft:#FBE7E7;
-    --blue-light:#5AA9F2; --gray:#515557; --ring:linear-gradient(90deg,#1C85E8 0 50%,#BE0404 50% 100%);
-    --ink:#1d2430; --muted:#5d6675; --line:#e3e7ee; --bg:#f7f8fa; --card:#ffffff;
-    --radius:14px;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
-  a{color:inherit}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-
-  /* Hero */
-  header.hero{background:#fff;color:var(--navy-deep);padding:40px 0 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
-  header.hero::before,header.hero::after{content:"";position:absolute;width:440px;height:440px;border-radius:50%;top:-150px;right:-170px;border:10px solid transparent}
-  header.hero::before{border-left-color:#1C85E8;border-top-color:#1C85E8;transform:rotate(-5deg);opacity:.9}
-  header.hero::after{border-right-color:#BE0404;border-bottom-color:#BE0404;transform:rotate(-5deg);opacity:.9}
-  .hero-inner{position:relative;z-index:1}
-  .logo{width:120px;height:120px;display:block;margin-bottom:18px}
-  .brand{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);font-weight:700}
-  h1{font-family:Fraunces,Georgia,serif;font-style:italic;font-weight:700;color:var(--gold);font-size:clamp(40px,7vw,64px);line-height:1.05;margin:6px 0 4px}
-  .subhead{font-weight:700;font-size:clamp(14.5px,2.6vw,22px);letter-spacing:.03em;text-transform:uppercase;color:var(--navy-deep);margin:0 0 16px;padding-bottom:10px;border-bottom:4px solid var(--navy);display:inline-block}
-  .hero p{font-size:18px;color:var(--gray);max-width:52ch;margin:0 0 26px}
-  .btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:600 15px Inter,sans-serif;padding:13px 22px;border-radius:999px;text-decoration:none;transition:transform .15s, box-shadow .15s}
-  .btn:hover{transform:translateY(-1px)}
-  .btn-gold{background:var(--gold);color:#fff;box-shadow:0 6px 18px rgba(190,4,4,.28)}
-  .btn-gold:hover{background:#a10303}
-  .btn-ghost{background:transparent;color:var(--navy);border:1.5px solid var(--line)}
-  .btn-ghost:hover{border-color:var(--navy)}
-
-  /* Next up */
-  .next{margin-top:-40px;position:relative;z-index:2}
-  .next-card{background:var(--card);border-radius:var(--radius);box-shadow:0 12px 40px rgba(20,40,66,.12);padding:24px;display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;border-top:5px solid transparent;border-image:var(--ring) 1}
-  .next-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
-  .next-title{font-family:Fraunces,Georgia,serif;font-size:26px;margin:2px 0}
-  .countdown{display:flex;gap:10px}
-  .cd{background:var(--bg);border-radius:10px;padding:8px 12px;text-align:center;min-width:58px}
-  .cd b{display:block;font-size:22px;color:var(--navy)}
-  .cd span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-
-  /* Filters */
-  section.list{padding:48px 0 24px}
-  .list-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
-  h2{font-family:Fraunces,Georgia,serif;font-size:32px;margin:0;color:var(--navy-deep)}
-  .chips{display:flex;gap:8px;flex-wrap:wrap}
-  .chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font:500 14px Inter,sans-serif;cursor:pointer;color:var(--muted)}
-  .chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
-
-  /* Cards */
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:12px}
-  .card-top{display:flex;gap:14px;align-items:center}
-  .date{flex:none;width:64px;height:68px;border-radius:12px;background:var(--navy-deep);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}
-  .date .m{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-light);font-weight:700}
-  .date .d{font-family:Fraunces,Georgia,serif;font-size:28px;line-height:1}
-  .card h3{margin:0;font-size:19px;color:var(--navy-deep)}
-  .meta{font-size:14px;color:var(--muted)}
-  .tag{display:inline-block;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--gold-soft);color:#9a0303;width:fit-content}
-  .card p{margin:0;font-size:15px;color:var(--ink)}
-  .card-actions{display:flex;gap:8px;margin-top:auto;padding-top:6px;flex-wrap:wrap}
-  .card-actions .btn{padding:10px 16px;font-size:14px}
-  .btn-navy{background:var(--navy);color:#fff}
-  .empty{color:var(--muted);padding:30px 0}
-
-  /* Footer */
-  footer{padding:40px 0 60px;color:var(--muted);font-size:14px;text-align:center}
-  footer strong{color:var(--navy-deep)}
-  footer img{width:72px;height:72px;display:block;margin:0 auto 10px}
-
-  /* Modal */
-  dialog{border:0;border-radius:18px;padding:0;width:min(460px,calc(100% - 32px));box-shadow:0 30px 80px rgba(0,0,0,.3)}
-  dialog::backdrop{background:rgba(20,40,66,.55)}
-  .modal-head{background:var(--navy-deep);border-bottom:5px solid transparent;border-image:var(--ring) 1;color:#fff;padding:22px 24px}
-  .modal-head small{color:var(--blue-light);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:12px}
-  .modal-head h3{margin:4px 0 0;font-family:Fraunces,Georgia,serif;font-size:24px}
-  form{padding:22px 24px 24px;display:grid;gap:14px}
-  label{font-size:13px;font-weight:600;color:var(--navy-deep);display:grid;gap:6px}
-  input,select{font:16px Inter,sans-serif;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;width:100%}
-  input:focus,select:focus{outline:none;border-color:var(--navy)}
-  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .form-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:4px}
-  .success{padding:34px 24px;text-align:center}
-  .success .check{width:56px;height:56px;border-radius:50%;background:var(--gold-soft);color:var(--gold);display:grid;place-items:center;margin:0 auto 12px;font-size:28px}
-  .hp{position:absolute;left:-9999px}
-  .friend{border:1.5px dashed var(--line);border-radius:12px;padding:12px 14px;display:grid;gap:10px}
-  .friend legend{font-size:13px;font-weight:700;color:var(--navy-deep);padding:0 6px}
-  .friend p{margin:0;font-size:12.5px;color:var(--muted)}
-  .spots{font-size:13px;font-weight:700;color:var(--gold)}
-  .spots.full{color:var(--navy)}
-  .sponsor{font-size:12.5px;color:var(--muted)}
-  .sponsor a{color:var(--navy-deep);font-weight:600}
-  .upsell{margin-top:18px;padding:16px;border-radius:12px;background:var(--bg);text-align:left}
-  .upsell small{display:block;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
-  .upsell b{display:block;color:var(--navy-deep);font-size:16px}
-  .upsell .meta{margin:2px 0 12px}
-  section.gallery{padding:8px 0 40px}
-  .g-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-top:18px}
-  .g-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-  .g-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
-  .g-card div{padding:14px 16px}
-  .g-card blockquote{margin:8px 0 0;font-size:14px;color:var(--ink);font-style:italic}
-
-  @media (max-width:720px){
-    .next-card{grid-template-columns:1fr;text-align:left}
-    .countdown{order:3}
-    .row{grid-template-columns:1fr}
-    header.hero{padding:36px 0 64px}
-    header.hero::before,header.hero::after{width:200px;height:200px;top:-80px;right:-80px;border-width:8px}
-  }
-</style>
+<link rel="stylesheet" href="/events/events.css">
 </head>
 <body>
 
 <header class="hero">
   <div class="wrap hero-inner">
-    <img src="crt-logo.png" alt="Carol Royse Team, Your Home Sold Guaranteed Realty" class="logo">
+    <img src="/events/crt-logo.png" alt="Carol Royse Team, Your Home Sold Guaranteed Realty" class="logo">
     <h1>You're Invited!</h1>
     <div class="subhead">Client Appreciation Events</div>
     <p>Happy hours, investor workshops, Thanksgiving Pie for Your Table and more. Our way of saying thank you to the clients and friends who make what we do possible. Bring a friend!</p>
     <a href="#events" class="btn btn-gold">See upcoming events ↓</a>
-    <a href="CRT_Client_Events_2026-2027.pdf" class="btn btn-ghost" download>Download the calendar (PDF)</a>
+    <a href="/events/CRT_Client_Events_2026-2027.pdf" class="btn btn-ghost" download>Download the calendar (PDF)</a>
   </div>
 </header>
 
@@ -165,7 +56,7 @@
 
 <footer>
   <div class="wrap">
-    <img src="crt-logo.png" alt="Carol Royse Team">
+    <img src="/events/crt-logo.png" alt="Carol Royse Team">
     <strong>Carol Royse Team</strong> · Your Home Sold Guaranteed Realty<br>
     Questions about an event? Just reply to your invite or give us a call.
   </div>
@@ -206,207 +97,38 @@
   </div>
 </dialog>
 
+<script src="/events/events.js"></script>
 <script>
-/* =========================================================
-   SETTINGS — edit these
-   ========================================================= */
-const OFFICE_ADDRESS = "7890 S Hardy Dr, Ste 106, Tempe, AZ 85284";
-const PIE_FORM = "https://docs.google.com/forms/d/e/1FAIpQLScB_0xEDQEd_KnOlMKvh9p7XAZ6Vxjjx76MgEr1onnTjDAJ-A/viewform?usp=header";  // Thanksgiving Pie for Your Table reservations (Google Form)
-const RSVP_ENDPOINT  = "https://mcp.realestateos.com/api/crt-events/rsvp";
-const AVAILABILITY_ENDPOINT = "https://mcp.realestateos.com/api/crt-events/availability"; // GET → {"counts":{"<date>|<title>": <total people>}}
-const LOW_SPOTS_AT = 15;   // show "Only X spots left" at or below this
-
-/* Past-event gallery. Add an entry after each event and the section appears.
-   Example: { title:"New Year Cheers", date:"2027-01-14", photo:"photos/new-year-cheers.jpg", quote:"So fun!", quoteBy:"The Smith Family" } */
-const GALLERY = [];
-
-/* Event list: add, remove or edit lines. Times are Arizona time. */
-const EVENTS = [
-  { date:"2026-11-23", start:"16:00", end:"18:00", title:"Thanksgiving Pie for Your Table: Scottsdale Pickup", type:"Thanksgiving", desc:"Everyone gets a free pie! Choose pumpkin or apple and pick it up in Scottsdale.", location:"Title Alliance of Arizona LLC, 6991 E Camelback Rd, Suite C230, Scottsdale, AZ 85251", rsvpUrl:PIE_FORM, rsvpLabel:"Reserve your pie", rsvpBy:"RSVP by Thu, Nov 19" },
-  { date:"2026-11-23", start:"16:00", end:"18:00", title:"Thanksgiving Pie for Your Table: Glendale Pickup", type:"Thanksgiving", desc:"Everyone gets a free pie! Choose pumpkin or apple and pick it up in Glendale.", location:"TA Conference Room, 20241 N 67th Ave, A101, Glendale, AZ 85308", rsvpUrl:PIE_FORM, rsvpLabel:"Reserve your pie", rsvpBy:"RSVP by Thu, Nov 19" },
-  { date:"2026-11-24", start:"16:00", end:"18:30", title:"Thanksgiving Pie for Your Table: The Big Pie Party", type:"Thanksgiving", desc:"Everyone gets a free pie! Pick up your pumpkin or apple pie and stay for complimentary Italian pasta, sodas, hot cocoa and specialty coffees. Season of Giving: please bring a non-perishable item to give to those in need.", rsvpUrl:PIE_FORM, rsvpLabel:"Reserve your pie", rsvpBy:"RSVP by Thu, Nov 19" },
-  { date:"2027-01-14", start:"16:00", end:"18:00", title:"New Year Cheers",                      type:"Happy Hour",   desc:"Our New Year happy hour. Kick off 2027 with drinks, bites and great company at The Keg in Tempe.", location:"The Keg Steakhouse + Bar, 23 S McClintock Dr, Tempe, AZ 85288", capacity:60 },
-  { date:"2027-01-21", start:"18:00", end:"20:00", title:"Wealth Builder Workshop",               type:"Workshop", desc:"Your 2027 Wealth Plan: how to use the equity in your home to buy your first rental, run the numbers, and choose the right financing for a Phoenix-area investment property.", capacity:40 },
-  { date:"2027-02-11", start:"16:00", end:"18:00", title:"Sweets for Your Sweetheart",               type:"Valentine\'s Day",   desc:"Stop by our Tempe office and pick up a sweet Valentine\'s gift, like chocolates and treats, for the special someone in your life." },
-  { date:"2027-03-13", start:"12:30", end:"16:00", title:"Spring Training Day", type:"Family", desc:"Take me out to the ballgame! Join us for a Cactus League spring training game. Meet the team before first pitch to pick up your tickets and a free team hat, then cheer with us all afternoon. Up to 4 seats per family. Exact game time and ballpark announced when the 2027 schedule is released.", location:"Cactus League ballpark (announced with the 2027 schedule)", capacity:150 },
-  { date:"2027-04-08", start:"16:00", end:"18:00", title:"Spring Cheers",                      type:"Happy Hour",   desc:"Spring happy hour with the team at The Keg in Chandler. Bring a friend!", location:"The Keg Steakhouse + Bar, 3065 W Chandler Blvd, Chandler, AZ 85226", capacity:60 },
-  { date:"2027-05-06", start:"16:00", end:"18:00", title:"Build-Your-Own Bouquet for Mom",            type:"Mother\'s Day",   desc:"Stop by our Tempe office and build a custom bouquet for the moms in your life. Fresh flowers, wrapping and ribbon are all on us." },
-  { date:"2027-06-17", start:"16:00", end:"18:00", title:"Treat for Dad",             type:"Father\'s Day",   desc:"Stop by our Tempe office and grab a little something for the dads in your life." },
-  { date:"2027-07-15", start:"16:00", end:"18:00", title:"Summer Cheers",                      type:"Happy Hour",   desc:"Beat the heat with cool drinks and good people at The Keg in Tempe.", location:"The Keg Steakhouse + Bar, 23 S McClintock Dr, Tempe, AZ 85288", capacity:60 },
-  { date:"2027-08-21", start:"09:30", end:"12:00", title:"Private Screening: Shrek 5",                       type:"Family",   desc:"We're renting out the theater! Bring the whole family to a private screening of Shrek 5 at Harkins Tempe Marketplace. Doors open at 9:30, movie starts at 10. Popcorn's on us.", location:"Harkins Theatres Tempe Marketplace, 2000 E Rio Salado Pkwy #1160, Tempe, AZ 85288", capacity:150 },
-  { date:"2027-09-11", start:"19:00", end:"20:30", title:"9/11 Healing Field Candlelight Vigil", type:"Community", desc:"Join us at the Tempe Healing Field as the community honors the 2,977 lives lost on September 11. The evening ceremony features a pipe band, the honor guard, the National Anthem and Taps, and attendees place candles at the base of the flags. The reading of the names continues at 7:30. The Carol Royse Team is a proud sponsor, and snow cones are on us.", location:"Tempe Beach Park, 80 W Rio Salado Pkwy, Tempe, AZ 85281" },
-  { date:"2027-09-16", start:"17:00", end:"19:00", title:"Kickoff Party",       type:"Game Day",   desc:"Wear your team colors and watch Thursday Night Football with us at The Keg in Chandler.", location:"The Keg Steakhouse + Bar, 3065 W Chandler Blvd, Chandler, AZ 85226", capacity:60 },
-  { date:"2027-10-14", start:"16:00", end:"18:00", title:"Fall Cheers",                      type:"Happy Hour",   desc:"Fall happy hour with the team at The Keg at Desert Ridge.", location:"The Keg Steakhouse + Bar, 21001 N Tatum Blvd, Phoenix, AZ 85050", capacity:60 },
-  { date:"2027-10-21", start:"18:00", end:"20:00", title:"Wealth Builder Workshop",               type:"Workshop", desc:"Market Update and Year-End Investor Moves: where prices, rates and rents are heading, plus 1031 exchanges, cash-out refinancing and planning your next purchase before the new year.", capacity:40 },
-  { date:"2027-11-22", start:"16:00", end:"18:00", title:"Thanksgiving Pie for Your Table: Scottsdale Pickup", type:"Thanksgiving", desc:"Our annual tradition is back! Everyone gets a free pie. Pick yours up in Scottsdale.", location:"Title Alliance of Arizona LLC, 6991 E Camelback Rd, Suite C230, Scottsdale, AZ 85251" },
-  { date:"2027-11-22", start:"16:00", end:"18:00", title:"Thanksgiving Pie for Your Table: Glendale Pickup", type:"Thanksgiving", desc:"Our annual tradition is back! Everyone gets a free pie. Pick yours up in Glendale.", location:"TA Conference Room, 20241 N 67th Ave, A101, Glendale, AZ 85308" },
-  { date:"2027-11-23", start:"16:00", end:"18:30", title:"Thanksgiving Pie for Your Table: The Big Pie Party", type:"Thanksgiving", desc:"Our annual tradition is back! Pick up your free pie and stay for food, drinks and the Season of Giving drive at our Tempe office." },
-  { date:"2027-12-11", start:"10:00", end:"13:00", title:"Santa's Cookie Workshop", type:"Christmas", desc:"Bring the whole family to our Tempe office for a holiday morning! Decorate Christmas cookies, sip hot cocoa, and take free photos with Santa that we'll text right to you. Please RSVP so we have enough cookies for everyone." },
-];
-/* ========================================================= */
-
-const loc=e=>e.location||OFFICE_ADDRESS;
-const key=e=>`${e.date}|${e.title}`;
-let COUNTS={};
-const spotsLeft=e=>e.capacity&&key(e) in COUNTS?Math.max(0,e.capacity-COUNTS[key(e)]):null;
-const isFull=e=>spotsLeft(e)===0;
-const spotsBadge=e=>{const n=spotsLeft(e); if(n===null) return "";
-  if(n===0) return `<div class="spots full">This event is full. Join the waitlist and we'll call you if a spot opens.</div>`;
-  return n<=LOW_SPOTS_AT?`<div class="spots">🔥 Only ${n} spot${n===1?"":"s"} left</div>`:""};
-const sponsorLine=e=>e.sponsor?`<div class="sponsor">Presented by ${e.sponsor.url?`<a href="${esc(e.sponsor.url)}" target="_blank" rel="noopener">${esc(e.sponsor.name)}</a>`:esc(e.sponsor.name)}</div>`:"";
-const rsvpBtn=(e,cls)=>e.rsvpUrl?`<a class="btn ${cls}" href="${esc(e.rsvpUrl)}" target="_blank" rel="noopener">${esc(e.rsvpLabel||"RSVP")}</a>`:`<button class="btn ${cls}" data-rsvp="${e.id}">${isFull(e)?"Join waitlist":"RSVP"}</button>`;
-const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-const AZ_OFFSET="-07:00"; // Arizona has no daylight saving time
-
-const toDate=(e,t)=>new Date(`${e.date}T${t}:00${AZ_OFFSET}`);
-const fmtTime=t=>{let[h,m]=t.split(":").map(Number);const ap=h>=12?"pm":"am";h=h%12||12;return m?`${h}:${String(m).padStart(2,"0")}${ap}`:`${h}${ap}`};
-const fmtLong=e=>{const[y,mo,d]=e.date.split("-").map(Number);const dt=new Date(y,mo-1,d);return `${DAYS[dt.getDay()]}, ${MONTHS[mo-1]} ${d}, ${y}`};
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-
-const now=new Date();
-const upcoming=EVENTS.map((e,i)=>({...e,id:i})).filter(e=>toDate(e,e.end)>now).sort((a,b)=>toDate(a,a.start)-toDate(b,b.start));
-
-/* Next up + countdown */
 function renderNext(){
   const wrap=document.getElementById("nextWrap");
   const e=upcoming[0]; if(!e){wrap.remove();return}
   wrap.innerHTML=`<div class="next-card">
-    <div><div class="next-label">Next up</div><div class="next-title">${esc(e.title)}</div>
-    <div class="meta">${fmtLong(e)} · ${fmtTime(e.start)}${e.end?"–"+fmtTime(e.end):""}</div>${spotsBadge(e)}</div>
+    <div><div class="next-label">Next up</div><div class="next-title"><a href="${pageUrl(e)}" style="text-decoration:none">${esc(e.title)}</a></div>
+    <div class="meta">${fmtLong(e)} · ${fmtRange(e)}</div>${spotsBadge(e)}</div>
     <div class="countdown" id="cd"></div>
     ${rsvpBtn(e,"btn-gold")}</div>`;
-  const tick=()=>{let s=Math.max(0,(toDate(e,e.start)-new Date())/1000);
-    const d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60);
-    document.getElementById("cd").innerHTML=[[d,"days"],[h,"hrs"],[m,"min"]].map(([v,l])=>`<div class="cd"><b>${v}</b><span>${l}</span></div>`).join("")};
-  tick(); clearInterval(window.__cd); window.__cd=setInterval(tick,30000);
+  startCountdown(e,"cd");
 }
-
-/* Filter chips */
 let filter="All";
 function renderChips(){
   const types=["All",...new Set(upcoming.map(e=>e.type))];
   document.getElementById("chips").innerHTML=types.map(t=>`<button class="chip" aria-pressed="${t===filter}" data-f="${esc(t)}">${esc(t)}</button>`).join("");
 }
-
 function renderGrid(){
   const list=upcoming.filter(e=>filter==="All"||e.type===filter);
   const g=document.getElementById("grid");
-  if(!list.length){g.innerHTML=`<div class="empty">New events coming soon. Check back!</div>`;return}
-  g.innerHTML=list.map(e=>{const[,mo,d]=e.date.split("-").map(Number);return `
-    <article class="card">
-      <div class="card-top">
-        <div class="date"><span class="m">${MONTHS[mo-1]}</span><span class="d">${d}</span></div>
-        <div><span class="tag">${esc(e.type)}</span><h3>${esc(e.title)}</h3>
-        <div class="meta">${fmtLong(e).split(",")[0]} · ${fmtTime(e.start)}${e.end?"–"+fmtTime(e.end):""}</div></div>
-      </div>
-      <p>${esc(e.desc)}</p>
-      ${sponsorLine(e)}
-      ${e.rsvpBy?`<div class="meta" style="color:var(--gold);font-weight:600">⏰ ${esc(e.rsvpBy)}</div>`:""}
-      ${spotsBadge(e)}
-      <div class="meta">📍 <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc(e))}" target="_blank" rel="noopener">${esc(loc(e))}</a></div>
-      <div class="card-actions">
-        ${rsvpBtn(e,"btn-navy")}
-        <button class="btn btn-ghost" data-ics="${e.id}">Add to calendar</button>
-      </div>
-    </article>`}).join("");
+  g.innerHTML=list.length?list.map(cardHTML).join(""):`<div class="empty">New events coming soon. Check back!</div>`;
 }
-
-/* .ics download */
-function ics(e){
-  const z=d=>d.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
-  const body=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Carol Royse Team//Events//EN","BEGIN:VEVENT",
-    `UID:crt-${e.date}-${e.id}@carolroysereviews.com`,`DTSTAMP:${z(new Date())}`,
-    `DTSTART:${z(toDate(e,e.start))}`,`DTEND:${z(toDate(e,e.end||e.start))}`,
-    `SUMMARY:Carol Royse Team ${e.title}`,`DESCRIPTION:${e.desc.replace(/,/g,"\\,")}`,
-    `LOCATION:${loc(e).replace(/,/g,"\\,")}`,"END:VEVENT","END:VCALENDAR"].join("\r\n");
-  const a=document.createElement("a");
-  a.href=URL.createObjectURL(new Blob([body],{type:"text/calendar"}));
-  a.download=`CRT-${e.title.replace(/\W+/g,"-")}-${e.date}.ics`; a.click();
-}
-
-/* RSVP send */
-async function sendRsvp(e,p){
-  const data={source:"CarolRoyseReviews.com/Events",event:e.title,eventDate:e.date,eventTime:fmtTime(e.start),
-    firstName:p.firstName,lastName:p.lastName,email:p.email,phone:p.phone,guests:p.guests,
-    friend:p.friend||null,waitlist:!!p.waitlist,chainedFrom:p.chainedFrom||null,
-    submittedAt:new Date().toISOString(),
-    tags:["Event RSVP",e.title].concat(p.waitlist?["Event Waitlist"]:[]).concat(p.chainedFrom?["Multi-Event RSVP"]:[])};
-  try{ if(RSVP_ENDPOINT) await fetch(RSVP_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)}); }catch(_){}
-  if(key(e) in COUNTS) COUNTS[key(e)]+=parseInt(p.guests)||1;
-}
-function nextEventAfter(e){
-  return upcoming.find(x=>!x.rsvpUrl&&toDate(x,x.start)>toDate(e,e.start)&&x.title!==e.title)||null;
-}
-
-/* Past-event gallery */
 function renderGallery(){
   if(!GALLERY.length) return;
   document.getElementById("gallery").hidden=false;
   document.getElementById("gGrid").innerHTML=GALLERY.map(g=>`<article class="g-card">
-    ${g.photo?`<img src="${esc(g.photo)}" alt="${esc(g.title)}" loading="lazy">`:""}
+    ${g.photo?`<img src="/events/${esc(g.photo)}" alt="${esc(g.title)}" loading="lazy">`:""}
     <div><b>${esc(g.title)}</b><div class="meta">${g.date?fmtLong({date:g.date}):""}</div>
     ${g.quote?`<blockquote>"${esc(g.quote)}"${g.quoteBy?` · ${esc(g.quoteBy)}`:""}</blockquote>`:""}</div></article>`).join("");
 }
-
-/* Live spots-left counts (page still works if this fails) */
-async function loadCounts(){
-  if(!AVAILABILITY_ENDPOINT) return;
-  try{ const r=await fetch(AVAILABILITY_ENDPOINT); if(!r.ok) return; const j=await r.json(); COUNTS=j.counts||{}; renderNext(); renderGrid(); }catch(_){}
-}
-
-/* RSVP modal */
-const dlg=document.getElementById("rsvp"); let current=null; const formHTML=document.getElementById("mBody").innerHTML;
-function openRsvp(e){
-  current=e;
-  document.getElementById("mDate").textContent=`${fmtLong(e)} · ${fmtTime(e.start)}`;
-  document.getElementById("mTitle").textContent=e.title;
-  document.getElementById("mBody").innerHTML=formHTML;
-  if(isFull(e)) document.getElementById("submitBtn").textContent="Join the waitlist";
-  bindForm(); dlg.showModal();
-}
-function bindForm(){
-  document.getElementById("cancel").onclick=()=>dlg.close();
-  document.getElementById("rsvpForm").onsubmit=async ev=>{
-    ev.preventDefault(); const f=ev.target;
-    if(f.company.value) return; // spam trap
-    if(!f.reportValidity()) return;
-    const btn=document.getElementById("submitBtn"); btn.disabled=true; btn.textContent="Saving…";
-    const person={firstName:f.firstName.value.trim(),lastName:f.lastName.value.trim(),email:f.email.value.trim(),phone:f.phone.value.trim()};
-    const friend=f.friendName.value.trim()||f.friendPhone.value.trim()?{name:f.friendName.value.trim(),phone:f.friendPhone.value.trim()}:null;
-    const waitlist=isFull(current);
-    await sendRsvp(current,{...person,guests:f.guests.value,friend,waitlist});
-    const nxt=nextEventAfter(current);
-    document.getElementById("mBody").innerHTML=`<div class="success"><div class="check">✓</div>
-      <h3 style="margin:0 0 6px;color:var(--navy-deep)">${waitlist?`You're on the waitlist, ${esc(person.firstName)}!`:`You're on the list, ${esc(person.firstName)}!`}</h3>
-      <p class="meta" style="margin:0 0 18px">${waitlist?"We'll call you the moment a spot opens.":"We'll text you a confirmation and a reminder before the event."}${friend&&friend.name?` We saved a spot for ${esc(friend.name)} too.`:""}</p>
-      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-      <button class="btn btn-ghost" id="addCal">Add to calendar</button>
-      <button class="btn ${nxt?"btn-ghost":"btn-gold"}" id="done">Done</button></div>
-      ${nxt?`<div class="upsell" id="upsell"><small>Up next</small><b>${esc(nxt.title)}</b>
-        <div class="meta">${fmtLong(nxt)} · ${fmtTime(nxt.start)}${nxt.end?"–"+fmtTime(nxt.end):""}</div>
-        <button class="btn btn-gold" id="alsoBtn" style="width:100%;justify-content:center">${isFull(nxt)?"Join that waitlist too":"Save my spot for this one too"}</button></div>`:""}
-      </div>`;
-    document.getElementById("addCal").onclick=()=>ics(current);
-    if(nxt) document.getElementById("alsoBtn").onclick=async()=>{
-      const b=document.getElementById("alsoBtn"); b.disabled=true; b.textContent="Saving…";
-      await sendRsvp(nxt,{...person,guests:f.guests.value,friend:null,waitlist:isFull(nxt),chainedFrom:current.title});
-      document.getElementById("upsell").innerHTML=`<small>Up next</small><b>You're set for ${esc(nxt.title)} too! 🎉</b>
-        <div class="meta" style="margin-bottom:10px">${fmtLong(nxt)} · ${fmtTime(nxt.start)}</div>
-        <button class="btn btn-ghost" id="addCal2">Add this one to calendar</button>`;
-      document.getElementById("addCal2").onclick=()=>ics(nxt);
-    };
-    document.getElementById("done").onclick=()=>dlg.close();
-  };
-}
-dlg.addEventListener("click",ev=>{if(ev.target===dlg)dlg.close()});
-
-document.addEventListener("click",ev=>{
-  const r=ev.target.closest("[data-rsvp]"); if(r) return openRsvp(upcoming.find(e=>e.id==r.dataset.rsvp));
-  const c=ev.target.closest("[data-ics]"); if(c) return ics(upcoming.find(e=>e.id==c.dataset.ics));
-  const f=ev.target.closest("[data-f]"); if(f){filter=f.dataset.f;renderChips();renderGrid();}
-});
-
+document.addEventListener("click",ev=>{const f=ev.target.closest("[data-f]"); if(f){filter=f.dataset.f;renderChips();renderGrid();}});
+window.onCounts=()=>{renderNext();renderGrid()};
 renderNext(); renderChips(); renderGrid(); renderGallery(); loadCounts();
 </script>
 </body>
